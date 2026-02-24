@@ -1,0 +1,227 @@
+/* ===============================
+   CONTAINER
+=================================*/
+.rv-container {
+  background: #f5f5f5;
+  padding: 30px 0 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =================================
+   BANNER SECTION
+=================================*/
+
+.rv-banner {
+  width: 100%;
+  height: 206px;
+  background-image: url('../assets/images/banner-tablet.jpg'); 
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+/* Inner flex layout */
+.rv-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Heading */
+.rv-banner-heading {
+  font-size: 32px;
+  font-weight: 300;
+  color: #2f3941;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.rv-banner-heading strong {
+  font-weight: 700;
+}
+
+/* Yellow badge */
+.rv-banner-badge {
+  background: #fed700;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.rv-banner-badge em {
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+/* Price */
+.rv-banner-badge .price {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+
+.rv-banner-badge .price sup {
+  font-size: 14px;
+  top: -8px;
+  position: relative;
+}
+/* ===============================
+   HEADER
+=================================*/
+.rv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 60px 25px;
+}
+
+.rv-title-main {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2f3941;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Yellow underline */
+.rv-title-main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #fed700;
+}
+
+/* Arrows */
+.arrow-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* ===============================
+   PRODUCT SLIDER
+=================================*/
+.rv-product-grid {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0 60px;
+}
+
+.rv-product-card {
+  flex: 0 0 calc(100% / 7);
+  min-width: calc(100% / 7);
+  padding: 15px;
+  background: #fff;
+  text-align: left;
+  position: relative;
+}
+
+/* Vertical separators */
+.rv-product-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: #eee;
+}
+
+/* Category */
+.rv-category {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Title */
+.rv-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+/* Image */
+.rv-image-container {
+  text-align: center;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+.rv-image {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Footer */
+.rv-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rv-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f3941;
+}
+
+/* Yellow Cart Button */
+.cart-button {
+  background: #fed700;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cart-button svg {
+  color: #2f3941;
+  width: 16px;
+  height: 16px;
+}
+
+/* ===============================
+   SLIDER INDICATORS
+=================================*/
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.indicator.active {
+  background: #fed700;
+  width: 22px;
+  border-radius: 10px;
+}

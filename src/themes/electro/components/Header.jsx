@@ -1,39 +1,63 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../styles/ElectroHeader.css';
 
-function Header() {
-    const [cartCount] = useState(2);
+const ElectroHeader = () => {
+  return (
+    <header className="electro-header">
+      <div className="mp-container electro-header-inner">
+        
+        {/* Logo & Mobile Menu */}
+        <div className="electro-logo-wrap">
+          <div className="electro-logo">
+            electro<span>.</span>
+          </div>
+          <button className="electro-mobile-toggle">
+            <i className="ph ph-list"></i>
+          </button>
+        </div>
 
-    return (
-        <header className="el-header">
-            <div className="container">
-                <div className="el-logo">
-                    <span className="e">E</span><span className="lectro">lectro</span>
-                </div>
-
-                <form className="el-search" onSubmit={(e) => e.preventDefault()}>
-                    <input type="text" placeholder="Search laptops, phones, TVs, cameras..." />
-                    <button type="submit">🔍</button>
-                </form>
-
-                <div className="el-header-actions">
-                    <div className="el-action">
-                        <span className="icon">❤️</span>
-                        <span className="lbl">Wishlist</span>
-                        <span className="el-count">3</span>
-                    </div>
-                    <div className="el-action">
-                        <span className="icon">👤</span>
-                        <span className="lbl">Account</span>
-                    </div>
-                    <div className="el-action">
-                        <span className="icon">🛒</span>
-                        <span className="lbl">Cart</span>
-                        <span className="el-count">{cartCount}</span>
-                    </div>
-                </div>
+        {/* Search Bar Section */}
+        <div className="electro-search-container">
+          <form className="electro-search-form">
+            <input 
+              type="text" 
+              placeholder="Search for Products" 
+              className="electro-search-input" 
+            />
+            <div className="electro-category-select">
+              <select defaultValue="all">
+                <option value="all">All Categories</option>
+                <option value="tech">Electronics</option>
+                <option value="home">Home Appliances</option>
+              </select>
+              <i className="ph ph-caret-down"></i>
             </div>
-        </header>
-    );
-}
+            <button type="submit" className="electro-search-btn">
+              <i className="ph ph-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
 
-export default Header;
+        {/* Action Icons */}
+        <div className="electro-actions">
+          <a href="#compare" className="electro-action-item">
+            <i className="ph ph-arrows-counter-clockwise"></i>
+          </a>
+          <a href="#wishlist" className="electro-action-item">
+            <i className="ph ph-heart"></i>
+          </a>
+          <a href="#cart" className="electro-cart-item">
+            <div className="electro-cart-icon-wrap">
+              <i className="ph ph-shopping-bag-open"></i>
+              <span className="electro-cart-count">2</span>
+            </div>
+            <span className="electro-cart-total">$1785.00</span>
+          </a>
+        </div>
+
+      </div>
+    </header>
+  );
+};
+
+export default ElectroHeader;

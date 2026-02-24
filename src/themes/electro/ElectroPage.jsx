@@ -3,14 +3,12 @@ import './styles/electro.css';
 import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-import HeroBanner from './components/HeroBanner';
-import FeaturedProducts from './components/FeaturedProducts';
-import CategoryBoxes from './components/CategoryBoxes';
+import ElectroPromos from './components/ElectroPromos';
+import ElectroSpecialDeals from './components/ElectroSpecialDeals';
+import ElectroBestDeals from './components/ElectroBestDeals';
 import Bestsellers from './components/Bestsellers';
-import PromoSections from './components/PromoSections';
 import RecentlyViewed from './components/RecentlyViewed';
-import BrandLogos from './components/BrandLogos';
-import BrandsBar from './components/BrandsBar';
+import ProductWidgets from './components/ProductWidgets';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
@@ -27,14 +25,12 @@ function ElectroPage() {
             <TopBar />
             <Header />
             <Navbar />
-            <HeroBanner />
-            <FeaturedProducts />
-            <CategoryBoxes />
+            <ElectroPromos />
+            <ElectroSpecialDeals />
+            <ElectroBestDeals />
             <Bestsellers />
-            <PromoSections />
             <RecentlyViewed />
-            <BrandLogos />
-            <BrandsBar />
+            <ProductWidgets />
             <Newsletter />
             <Footer />
         </div>
