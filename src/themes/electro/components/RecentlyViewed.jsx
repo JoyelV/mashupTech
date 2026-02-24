@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import "../styles/RecentlyViewed.css";
-import bannerTablet from "../assets/images/banner-tablet.jpg";
 import item1 from "../assets/images/recent/img1.jpg";
 import item2 from "../assets/images/recent/img2.jpg";
 import item3 from "../assets/images/recent/img3.jpg";

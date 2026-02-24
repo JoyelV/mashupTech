@@ -15,10 +15,26 @@ function BottomFooter() {
                     {/* Social Icons & Back to Top */}
                     <div className="mp-social-wrapper">
                         <ul className="mp-social-links">
-                            <li><a href="#" className="mp-social-icon"><i className="ph ph-facebook-logo"></i></a></li>
-                            <li><a href="#" className="mp-social-icon"><i className="ph ph-twitter-logo"></i></a></li>
-                            <li><a href="#" className="mp-social-icon"><i className="ph ph-instagram-logo"></i></a></li>
-                            <li><a href="#" className="mp-social-icon"><i className="ph ph-linkedin-logo"></i></a></li>
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="mp-social-icon">
+                                    <i className="ph ph-facebook-logo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="mp-social-icon">
+                                    <i className="ph ph-twitter-logo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="mp-social-icon">
+                                    <i className="ph ph-instagram-logo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="mp-social-icon">
+                                    <i className="ph ph-linkedin-logo"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

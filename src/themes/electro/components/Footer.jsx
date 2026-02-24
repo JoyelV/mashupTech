@@ -71,10 +71,10 @@ export default function Footer() {
           </div>
           
           <div className="footer-socials">
-            <a href="#" aria-label="Facebook"><FacebookIcon /></a>
-            <a href="#" aria-label="Google"><GoogleIcon /></a>
-            <a href="#" aria-label="Twitter"><TwitterIcon /></a>
-            <a href="#" aria-label="Github"><GithubIcon /></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon /></a>
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" aria-label="Google"><GoogleIcon /></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><TwitterIcon /></a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Github"><GithubIcon /></a>
           </div>
         </div>
 
@@ -82,20 +82,20 @@ export default function Footer() {
           <h3 className="footer-widget-title">Find it Fast</h3>
           <div className="footer-links-split">
             <ul className="footer-nav-list">
-              <li><a href="#">Laptops & Computers</a></li>
-              <li><a href="#">Cameras & Photography</a></li>
-              <li><a href="#">Smart Phones & Tablets</a></li>
-              <li><a href="#">Video Games & Consoles</a></li>
-              <li><a href="#">TV & Audio</a></li>
-              <li><a href="#">Gadgets</a></li>
-              <li><a href="#">Car Electronic & GPS</a></li>
+              <li><a href="/">Laptops & Computers</a></li>
+              <li><a href="/">Cameras & Photography</a></li>
+              <li><a href="/">Smart Phones & Tablets</a></li>
+              <li><a href="/">Video Games & Consoles</a></li>
+              <li><a href="/">TV & Audio</a></li>
+              <li><a href="/">Gadgets</a></li>
+              <li><a href="/">Car Electronic & GPS</a></li>
             </ul>
             <ul className="footer-nav-list">
-              <li><a href="#">Printers & Ink</a></li>
-              <li><a href="#">Software</a></li>
-              <li><a href="#">Office Supplies</a></li>
-              <li><a href="#">Computer Components</a></li>
-              <li><a href="#">Accesories</a></li>
+              <li><a href="/">Printers & Ink</a></li>
+              <li><a href="/">Software</a></li>
+              <li><a href="/">Office Supplies</a></li>
+              <li><a href="/">Computer Components</a></li>
+              <li><a href="/">Accesories</a></li>
             </ul>
           </div>
         </div>
@@ -103,13 +103,13 @@ export default function Footer() {
         <div className="footer-col-care">
           <h3 className="footer-widget-title">Customer Care</h3>
           <ul className="footer-nav-list">
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Order Tracking</a></li>
-            <li><a href="#">Wish List</a></li>
-            <li><a href="#">Customer Service</a></li>
-            <li><a href="#">Returns / Exchange</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Product Support</a></li>
+            <li><a href="/">My Account</a></li>
+            <li><a href="/">Order Tracking</a></li>
+            <li><a href="/">Wish List</a></li>
+            <li><a href="/">Customer Service</a></li>
+            <li><a href="/">Returns / Exchange</a></li>
+            <li><a href="/">FAQs</a></li>
+            <li><a href="/">Product Support</a></li>
           </ul>
         </div>
 

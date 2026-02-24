@@ -6,7 +6,7 @@ import img3 from '../assets/images/product/product-img10.png';
 import img4 from '../assets/images/product/product-img11.png';
 import img5 from '../assets/images/product/product-img12.png';
 import img6 from '../assets/images/product/product-img14.png';
-import img7 from '../assets/images/product/product-img17.png';
+// removed unused img7 import
 
 const filterTabs = ['All', 'Grocery', 'Fruits', 'Juices', 'Vegetables', 'Snacks', 'Organic Foods'];
 
