@@ -1,0 +1,164 @@
+.mp-footer {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    padding: 80px 0;
+}
+
+.mp-footer-row {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.mp-footer-col {
+    flex: 1; 
+}
+
+.mp-col-brand {
+    flex: 0 0 22%;
+    min-width: 250px;
+}
+
+.mp-col-links {
+    flex: 0 0 12%;
+    min-width: 140px;
+}
+
+.mp-col-app {
+    flex: 0 0 25%;
+    min-width: 280px;
+}
+
+/* Typography & List Styling */
+.mp-footer-logo img {
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.mp-brand-desc {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.mp-contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mp-contact-list li {
+    font-size: 14px;
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.mp-contact-list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mp-footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 20px 0;
+}
+
+.mp-footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.mp-footer-links li {
+    margin-bottom: 12px;
+}
+
+.mp-footer-links li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #334155;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mp-footer-links li a:hover {
+    color: #1b7b9b;
+}
+
+/* App & Payment Styling */
+.mp-app-desc {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.mp-download-wrap {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.mp-qr-code {
+    width: 85px;
+    height: 85px;
+    padding: 8px;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.mp-qr-code img {
+    width: 100%;
+}
+
+.mp-app-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mp-app-btns img {
+    height: 38px;
+}
+
+.mp-payment-icons img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 1200px) {
+    .mp-footer-row {
+        flex-wrap: wrap; 
+    }
+    .mp-col-brand, .mp-col-app {
+        flex: 1 0 45%;
+    }
+    .mp-col-links {
+        flex: 1 0 22%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mp-col-links {
+        flex: 1 0 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .mp-footer-col {
+        flex: 1 0 100%;
+        text-align: center;
+    }
+    .mp-download-wrap {
+        justify-content: center;
+    }
+    .mp-footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+}

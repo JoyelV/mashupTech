@@ -6,7 +6,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
     <>
-          {/* Navbar */}
+      {/* Navbar */}
       <nav className="navbar">
         <div className="container nav-flex">
           <div className="nav-links">
@@ -21,10 +21,9 @@ const Navbar = () => {
           </div>
 
           <div className="delivery">
-  <FontAwesomeIcon icon={faLocationDot} className="delivery-icon" />
-  <p>
-Delivery: 258 FKD Street, Berlin</p>
-</div>
+            <FontAwesomeIcon icon={faLocationDot} className="delivery-icon" />
+            <p>Delivery: 258 FKD Street, Berlin</p>
+          </div>
         </div>
       </nav>
     </>

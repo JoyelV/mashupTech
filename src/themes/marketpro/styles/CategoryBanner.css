@@ -1,0 +1,106 @@
+.mp-category-section {
+    padding: 60px 0 40px 0; 
+    background-color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.mp-category-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The horizontal scrolling container */
+.mp-category-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 15px 0; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.mp-category-track::-webkit-scrollbar {
+    display: none; 
+}
+
+/* Individual Category Items */
+.mp-category-item {
+    flex: 0 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    width: 140px;
+}
+
+.mp-category-circle {
+    width: 140px;
+    height: 140px;
+    background-color: #eafcf6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.mp-category-item:hover .mp-category-circle {
+    transform: translateY(-8px);
+}
+
+.mp-category-circle img {
+    max-width: 85px;
+    object-fit: contain;
+}
+
+.mp-category-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b; 
+    margin: 0 0 4px 0;
+}
+
+.mp-category-count {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* -------------------------------------------
+   Navigation Arrows
+---------------------------------------------- */
+.mp-cat-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 5;
+    color: #64748b;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.mp-cat-arrow:hover {
+    color: #1b7b9b;
+    box-shadow: 0 6px 14px -2px rgba(0, 0, 0, 0.12);
+}
+
+.mp-cat-arrow-left {
+    left: -22px;
+}
+
+.mp-cat-arrow-right {
+    right: -22px;
+}

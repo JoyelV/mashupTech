@@ -1,0 +1,130 @@
+.mp-newsletter-section {
+    padding: 60px 0;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* -------------------------------------------
+   Banner Wrapper
+---------------------------------------------- */
+.mp-newsletter-banner {
+    background-color: #e5e7eb; 
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* -------------------------------------------
+   Left Side Content
+---------------------------------------------- */
+.mp-newsletter-content {
+    flex: 1;
+    max-width: 550px;
+    z-index: 2;
+}
+
+.mp-newsletter-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+/* Subscription Form */
+.mp-newsletter-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mp-newsletter-input {
+    flex: 1;
+    height: 54px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.mp-newsletter-btn {
+    background-color: #22c55e; 
+    color: #ffffff;
+    border: none;
+    padding: 0 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mp-newsletter-btn:hover {
+    background-color: #16a34a;
+}
+
+.mp-newsletter-agreement {
+    font-size: 14px;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* -------------------------------------------
+   Right Side Graphic
+---------------------------------------------- */
+.mp-newsletter-img-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mp-newsletter-img-wrap img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+/* -------------------------------------------
+   Mobile Responsiveness
+---------------------------------------------- */
+@media (max-width: 1024px) {
+    .mp-newsletter-banner {
+        padding: 60px 40px;
+    }
+    .mp-newsletter-title {
+        font-size: 32px;
+    }
+    .mp-newsletter-img-wrap img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mp-newsletter-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .mp-newsletter-content {
+        margin-bottom: 40px;
+    }
+    
+    .mp-newsletter-form {
+        flex-direction: column;
+    }
+    
+    .mp-newsletter-btn {
+        height: 54px;
+    }
+
+    .mp-newsletter-img-wrap {
+        justify-content: center;
+    }
+}

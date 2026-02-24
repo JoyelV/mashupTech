@@ -18,22 +18,22 @@ const Header = () => {
     {
       name: "Breakfast & Dairy",
       icon: icon01,
-      subMenu: ["Breakfast", "Dinner", "Pumpkin"]
+      subMenu: ["Breakfast", "Dinner", "Pumpkin"],
     },
     {
       name: "Meats & Seafood",
       icon: icon02,
-      subMenu: ["Breakfast", "Dinner", "Pumpkin"]
+      subMenu: ["Breakfast", "Dinner", "Pumpkin"],
     },
     {
       name: "Breads & Bakery",
-      icon: icon03
+      icon: icon03,
     },
     {
       name: "Chips & Snacks",
       icon: icon04,
-      subMenu: ["Breakfast", "Dinner", "Pumpkin"]
-    }
+      subMenu: ["Breakfast", "Dinner", "Pumpkin"],
+    },
   ];
 
   const toggleSubMenu = (index) => {
@@ -64,16 +64,13 @@ const Header = () => {
             <span className="highlight"> Place your 1st order in.</span>
             <span className="expired"> Sorry, your session has expired.</span>
           </div>
-          <div className="top-right">
-            Need help? Call Us:+258 3268 21485
-          </div>
+          <div className="top-right">Need help? Call Us:+258 3268 21485</div>
         </div>
       </div>
 
       {/* Main Header */}
       <header className="main-header">
         <div className="container header-flex">
-
           {/* Logo */}
           <div className="logo">
             <img src={logo} alt="Ekomart Logo" className="logo-img" />
@@ -81,43 +78,40 @@ const Header = () => {
 
           {/* Category + Search */}
           <div className="category-search-wrapper" ref={dropdownRef}>
-
             {/* Category Button */}
             <div
-  className="category-btn category-hover-header"
-  onClick={() => setShowCategories(!showCategories)}
->
-  <img
-    className="parent"
-    alt="icons"
-    src={categoryIcon}
-  />
-  <span>Categories</span>
-</div>
+              className="category-btn category-hover-header"
+              onClick={() => setShowCategories(!showCategories)}
+            >
+              <img className="parent" alt="icons" src={categoryIcon} />
+              <span>Categories</span>
+            </div>
 
             {/* Dropdown Menu */}
             {showCategories && (
               <ul className="category-sub-menu" id="category-active-four">
                 {categories.map((item, index) => (
                   <li key={index}>
-                   <button
-  className="menu-item"
-  onClick={() => toggleSubMenu(index)}
-  aria-expanded={activeIndex === index}
->
-  <img src={item.icon} alt="" />
-  <span>{item.name}</span>
-  {item.subMenu && <span className="plus">+</span>}
-</button>
+                    <button
+                      className="menu-item"
+                      onClick={() => toggleSubMenu(index)}
+                      aria-expanded={activeIndex === index}
+                    >
+                      <img src={item.icon} alt="" />
+                      <span>{item.name}</span>
+                      {item.subMenu && <span className="plus">+</span>}
+                    </button>
 
-{item.subMenu && activeIndex === index && (
-  <ul className="submenu">
-    {item.subMenu.map((sub, i) => (
-      <li key={i}>
-        <a href="/shop" className="mobile-menu-link">{sub}</a>
-      </li>
-    ))}
-  </ul>
+                    {item.subMenu && activeIndex === index && (
+                      <ul className="submenu">
+                        {item.subMenu.map((sub, i) => (
+                          <li key={i}>
+                            <a href="/shop" className="mobile-menu-link">
+                              {sub}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
                     )}
                   </li>
                 ))}
@@ -126,46 +120,59 @@ const Header = () => {
 
             {/* Search */}
             <form
-  className="search-header"
-  autoComplete="off"
-  onSubmit={(e) => {
-    e.preventDefault();
-    console.log(search);
-  }}
->
-  <input
-    type="text"
-    placeholder="Search for products, categories or brands"
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-    required
-  />
+              className="search-header"
+              autoComplete="off"
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log(search);
+              }}
+            >
+              <input
+                type="text"
+                placeholder="Search for products, categories or brands"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                required
+              />
 
-  <button
-    type="submit"
-    className="rts-btn btn-primary radious-sm with-icon"
-  >
-    <span className="btn-text">Search</span>
-    <span className="arrow-icon">
-      <i className="fa-solid fa-magnifying-glass"></i>
-    </span>
-  </button>
-</form>
+              <button
+                type="submit"
+                className="rts-btn btn-primary radious-sm with-icon"
+              >
+                <span className="btn-text">Search</span>
+                <span className="arrow-icon">
+                  <i className="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </button>
+            </form>
           </div>
 
-    {/* Right Actions */}
-      <div className="account-wishlist-cart-area-header">
-      <a className="btn-border-only account" href="/account">
-        <i className="fa-solid fa-user"></i> 
-        <span>Account</span>
-      </a>
-      <a className="btn-border-only account compare-number" href="/compare"><i className="fa-solid fa-code-compare"></i><span className="number">0</span></a>
-      <div className="btn-border-only cart category-hover-header"><i className="fa-solid fa-heart"></i><span className="text">Wishlist</span><span className="number">0</span></div>
-      <div className="btn-border-only cart category-hover-header"><i className="fa-sharp fa-solid fa-cart-shopping"></i><span className="text">Cart</span><span className="number">0</span>
-      </div>
-    </div>
-  </div>
-</header>
+          {/* Right Actions */}
+          <div className="account-wishlist-cart-area-header">
+            <a className="btn-border-only account" href="/account">
+              <i className="fa-solid fa-user"></i>
+              <span>Account</span>
+            </a>
+            <a
+              className="btn-border-only account compare-number"
+              href="/compare"
+            >
+              <i className="fa-solid fa-code-compare"></i>
+              <span className="number">0</span>
+            </a>
+            <div className="btn-border-only cart category-hover-header">
+              <i className="fa-solid fa-heart"></i>
+              <span className="text">Wishlist</span>
+              <span className="number">0</span>
+            </div>
+            <div className="btn-border-only cart category-hover-header">
+              <i className="fa-sharp fa-solid fa-cart-shopping"></i>
+              <span className="text">Cart</span>
+              <span className="number">0</span>
+            </div>
+          </div>
+        </div>
+      </header>
     </>
   );
 };

@@ -6,15 +6,18 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
 import PromoCountdownBanners from './components/PromoCountdownBanners';
+import SmallBanners from './components/SmallBanners';
 import FlashSale from './components/FlashSale';
-import DailyBestSells from './components/DailyBestSells';
+import DiscountBanner from './components/DiscountBanner';
+import ProductWidgets from './components/ProductWidgets';
 import CategoryBanner from './components/CategoryBanner';
 import ProductGrid from './components/ProductGrid';
-import VerticalProductColumns from './components/VerticalProductColumns';
+import HotDeals from './components/VerticalProductColumns';
 import ShopByBrands from './components/ShopByBrands';
-import VendorSection from './components/VendorSection';
+import BestSells from './components/BestSells';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import BottomFooter from './components/BottomFooter';
 
 function MarketProPage() {
     return (
@@ -30,16 +33,19 @@ function MarketProPage() {
             <Header />
             <Navbar />
             <HeroBanner />
-            <PromoCountdownBanners />
             <CategoryBanner />
+            <SmallBanners />
             <FlashSale />
+            <PromoCountdownBanners />
             <ProductGrid />
-            <DailyBestSells />
-            <VerticalProductColumns />
+            <DiscountBanner />
+            <HotDeals />
+            <ProductWidgets />
             <ShopByBrands />
-            <VendorSection />
+            <BestSells />
             <Newsletter />
             <Footer />
+            <BottomFooter />
         </div>
     );
 }

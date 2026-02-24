@@ -1,0 +1,74 @@
+.mp-bottom-footer {
+    padding: 24px 0;
+    background-color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.mp-bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -------------------------------------------
+   Copyright Text
+---------------------------------------------- */
+.mp-copyright {
+    font-size: 14px;
+    color: #0f172a; 
+    font-weight: 500;
+}
+
+.mp-year {
+    color: #22c55e; 
+    font-weight: 700;
+}
+
+/* -------------------------------------------
+   Social Links & Back to Top
+---------------------------------------------- */
+.mp-social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mp-social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 12px;
+}
+
+.mp-social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1b7b9b; 
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.mp-social-icon:hover {
+    background-color: #1b7b9b;
+    color: #ffffff;
+    border-color: #1b7b9b;
+}
+
+/* -------------------------------------------
+   Mobile Responsiveness
+---------------------------------------------- */
+@media (max-width: 768px) {
+    .mp-bottom-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

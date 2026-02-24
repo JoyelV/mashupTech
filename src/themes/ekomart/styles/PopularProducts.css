@@ -19,7 +19,7 @@
 }
 
 .header h2 {
-font-size: 44px;
+  font-size: 44px;
   font-weight: 700;
 }
 
@@ -40,7 +40,7 @@ font-size: 44px;
 
 .tab.active {
   background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Grid */
@@ -52,17 +52,17 @@ font-size: 44px;
 
 .single-shopping-card-one {
   padding: 15px;
-  background: #F5F6F7;
+  background: #f5f6f7;
   border-radius: 6px;
 }
 
-    .col-lg-3 {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        width: 25%
-    }
+.col-lg-3 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+}
 
 .single-shopping-card-one .image-and-action-area-wrapper .action-share-option {
   position: absolute;
@@ -80,7 +80,10 @@ font-size: 44px;
   transition: 0.4s cubic-bezier(0.375, 1.185, 0.92, 0.975);
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action {
   height: 28px;
   width: 28px;
   display: flex;
@@ -91,16 +94,27 @@ font-size: 44px;
   transition: all 0.3s;
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action i {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action
+  i {
   color: #fff;
   transition: all 0.3s;
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action:hover {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action:hover {
   background: #fff;
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action:hover i {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action:hover
+  i {
   color: var(--color-primary);
   animation: 0.5s mymove;
 }
@@ -113,16 +127,16 @@ font-size: 44px;
 }
 
 .badge {
-    display: inline-block;
-    padding: .25em .15em;
-    font-size: .75em;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem
+  display: inline-block;
+  padding: 0.25em 0.15em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
 }
 
 .single-shopping-card-one .thumbnail-preview .badge {
@@ -133,7 +147,7 @@ font-size: 44px;
 }
 
 .single-shopping-card-one .thumbnail-preview .badge i {
-  color: #EABC5E;
+  color: #eabc5e;
   font-size: 50px;
 }
 
@@ -143,7 +157,7 @@ font-size: 44px;
   left: 17px;
   font-size: 11px;
   line-height: 1.1;
-  color: #2C3C28;
+  color: #2c3c28;
   text-align: left;
   font-weight: 700;
 }
@@ -171,7 +185,7 @@ font-size: 44px;
 }
 
 .bg_light-1 .single-shopping-card-one .thumbnail-preview {
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
 }
 
 .single-shopping-card-one .cart-counter-action {
@@ -200,7 +214,10 @@ font-size: 44px;
   font-weight: 600;
 }
 
-.single-shopping-card-one .cart-counter-action .quantity-edit .button-wrapper-action {
+.single-shopping-card-one
+  .cart-counter-action
+  .quantity-edit
+  .button-wrapper-action {
   border: 1px solid rgba(43, 66, 38, 0.12);
   border-radius: 2px;
   background: #fff;
@@ -221,7 +238,7 @@ font-size: 44px;
 }
 
 .rts-btn.btn-primary {
-  background: #629D23;
+  background: #629d23;
   border-radius: 6px;
   display: block;
   max-width: max-content;
@@ -240,11 +257,13 @@ font-size: 44px;
 
 .rts-btn.with-icon .arrow-icon {
   display: inline-block;
-  transition: opacity 0.4s 0.25s, transform 0.6s 0.25s;
+  transition:
+    opacity 0.4s 0.25s,
+    transform 0.6s 0.25s;
   transition-timing-function: cubic-bezier(0.1, 0.75, 0.25, 1);
 }
 
-.rts-btn.with-icon .arrow-icon+.arrow-icon {
+.rts-btn.with-icon .arrow-icon + .arrow-icon {
   margin-inline-end: 0;
   margin-inline-start: 8px;
   display: inline-block;
@@ -271,18 +290,17 @@ font-size: 44px;
   transform: translateX(0);
 }
 
-
 .single-shopping-card-one .cart-counter-action .rts-btn {
   font-size: 14px;
   padding: 8px 16px !important;
   background: transparent;
-  color: #629D23;
-  border: 1px solid #629D23;
+  color: #629d23;
+  border: 1px solid #629d23;
 }
 
 .single-shopping-card-one .body-content .price-area .current {
   font-weight: 700;
-  color:#DC2626;
+  color: #dc2626;
   font-size: 20px;
   margin-bottom: 0;
 }
@@ -291,7 +309,7 @@ font-size: 44px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 500;
-  color: #74787C;
+  color: #74787c;
   position: relative;
 }
 
@@ -305,13 +323,16 @@ font-size: 44px;
   gap: 8px;
   height: 48px;
   border-radius: 10px 10px 0 0;
-  background: #629D23;
+  background: #629d23;
   padding: 10px 29px;
   transform-origin: bottom;
   transition: 0.4s cubic-bezier(0.375, 1.185, 0.92, 0.975);
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action {
   height: 28px;
   width: 28px;
   display: flex;
@@ -322,22 +343,32 @@ font-size: 44px;
   transition: all 0.3s;
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action i {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action
+  i {
   color: #fff;
   transition: all 0.3s;
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action:hover {
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action:hover {
   background: #fff;
 }
 
-.single-shopping-card-one .image-and-action-area-wrapper .action-share-option .single-action:hover i {
-  color: #629D23;
+.single-shopping-card-one
+  .image-and-action-area-wrapper
+  .action-share-option
+  .single-action:hover
+  i {
+  color: #629d23;
   animation: 0.5s mymove;
 }
 
 .openuptip[title] {
   position: relative;
-  /* opinion 1 */
   cursor: pointer;
 }

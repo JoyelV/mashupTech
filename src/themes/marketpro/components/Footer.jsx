@@ -1,75 +1,91 @@
 import React from 'react';
+import '../styles/Footer.css';
+import logo from '../assets/images/marketpro-logo.png'; 
+import qrCode from '../assets/images/footer/qr-code.png'; 
+import googlePlay from '../assets/images/footer/google-play.svg'; 
+import appleStore from '../assets/images/footer/google-play.svg'; 
+import payments from '../assets/images/footer/method.png'; 
 
 function Footer() {
+    const footerLinks = [
+        {
+            title: 'Information',
+            links: ['Become a Vendor', 'Affiliate Program', 'Privacy Policy', 'Our Suppliers', 'Extended Plan', 'Community']
+        },
+        {
+            title: 'Customer Support',
+            links: ['Help Center', 'Contact Us', 'Report Abuse', 'Submit and Dispute', 'Policies & Rules', 'Online Shopping']
+        },
+        {
+            title: 'My Account',
+            links: ['My Account', 'Order History', 'Shoping Cart', 'Compare', 'Help Ticket', 'Wishlist']
+        },
+        {
+            title: 'Daily Groceries',
+            links: ['Dairy & Eggs', 'Meat & Seafood', 'Breakfast Food', 'Household Supplies', 'Bread & Bakery', 'Pantry Staples']
+        }
+    ];
+
     return (
-        <footer className="mp-footer">
-            <div className="footer-top">
-                <div className="container">
-                    <div className="footer-grid">
-                        <div className="footer-col brand-col">
-                            <div className="logo">
-                                <img src="https://marketpro-nextjs.vercel.app/assets/images/logo/logo.png" alt="MarketPro" style={{ height: '35px' }} />
+        <footer className="mp-footer py-80 border-top">
+            <div className="mp-container">
+                <div className="mp-footer-row">
+                    
+                    {/* Column 1: Brand Info */}
+                    <div className="mp-footer-col mp-col-brand">
+                        <div className="mp-footer-logo">
+                            <img src={logo} alt="MarketPro Logo" />
+                        </div>
+                        <p className="mp-brand-desc">
+                            We're Grocery Shop, an innovative team of food suppliers.
+                        </p>
+                        <ul className="mp-contact-list">
+                            <li>2972 Westheimer Rd. Santa Ana, Illinois 85486</li>
+                            <li><a href="mailto:support@example.com">support@example.com</a></li>
+                            <li><a href="tel:+4065550120">+ (406) 555-0120</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Columns 2, 3, 4, 5: Navigation Links */}
+                    {footerLinks.map((section, idx) => (
+                        <div key={idx} className="mp-footer-col mp-col-links">
+                            <h4 className="mp-footer-title">{section.title}</h4>
+                            <ul className="mp-footer-links">
+                                {section.links.map((link, linkIdx) => (
+                                    <li key={linkIdx}>
+                                        <a href={`/${link.toLowerCase().replace(/\s+/g, '-')}`}>
+                                            {link}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+
+                    {/* Column 6: App & Download */}
+                    <div className="mp-footer-col mp-col-app">
+                        <h4 className="mp-footer-title">Shop on The Go</h4>
+                        <p className="mp-app-desc">MarketPro App is available. Get it now</p>
+                        
+                        <div className="mp-download-wrap">
+                            <div className="mp-qr-code">
+                                <img src={qrCode} alt="Scan QR" />
                             </div>
-                            <p className="desc">Marketpro is a popular and multifunctional ecommerce theme for any marketplace.</p>
-                            <ul className="contact-info">
-                                <li><i className="fa-light fa-location-dot"></i> 571 Libery Street, New York, USA</li>
-                                <li><i className="fa-light fa-envelope"></i> help@marketpro.com</li>
-                                <li><i className="fa-light fa-phone"></i> (+12) 871 382 023</li>
-                            </ul>
-                        </div>
-                        <div className="footer-col">
-                            <h4 className="title">Information</h4>
-                            <ul>
-                                <li><a href="/">Company Profile</a></li>
-                                <li><a href="/">About Us</a></li>
-                                <li><a href="/">Help Center</a></li>
-                                <li><a href="/">Our Blog</a></li>
-                                <li><a href="/">Contact Us</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-col">
-                            <h4 className="title">Support</h4>
-                            <ul>
-                                <li><a href="/">Live Chat</a></li>
-                                <li><a href="/">Support Ticket</a></li>
-                                <li><a href="/">Service Guideline</a></li>
-                                <li><a href="/">Tally Management</a></li>
-                                <li><a href="/">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-col app-col">
-                            <h4 className="title">Shop on The Go</h4>
-                            <p>Marketpro App is now available on App Store & Google Play. Get it now.</p>
-                            <div className="app-qr">
-                                <div className="qr">
-                                    <img src="https://marketpro-nextjs.vercel.app/assets/images/footer/qr.png" alt="QR" />
-                                </div>
-                                <div className="app-btns">
-                                    <a href="/"><img src="https://marketpro-nextjs.vercel.app/assets/images/footer/app-store.png" alt="App Store" /></a>
-                                    <a href="/"><img src="https://marketpro-nextjs.vercel.app/assets/images/footer/play-store.png" alt="Play Store" /></a>
-                                </div>
+                            <div className="mp-app-btns">
+                                <a href="https://apple.com" target="_blank" rel="noreferrer">
+                                    <img src={appleStore} alt="Apple Store" />
+                                </a>
+                                <a href="https://play.google.com" target="_blank" rel="noreferrer">
+                                    <img src={googlePlay} alt="Google Play" />
+                                </a>
                             </div>
+                        </div>
+
+                        <div className="mp-payment-icons">
+                            <img src={payments} alt="Accepted Payments" />
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className="footer-bottom">
-                <div className="container">
-                    <div className="bottom-inner">
-                        <p className="copyright">Copyright © 2025 MarketPro. All rights reserved.</p>
-                        <div className="payment-icons">
-                            <img src="https://marketpro-nextjs.vercel.app/assets/images/footer/payment.png" alt="Payments" />
-                        </div>
-                        <div className="social-links">
-                            <a href="/" className="social-circle"><i className="fa-brands fa-facebook-f"></i></a>
-                            <a href="/" className="social-circle"><i className="fa-brands fa-twitter"></i></a>
-                            <a href="/" className="social-circle"><i className="fa-brands fa-instagram"></i></a>
-                            <a href="/" className="social-circle"><i className="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                        <button className="back-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                            <i className="fa-light fa-arrow-up"></i>
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </footer>

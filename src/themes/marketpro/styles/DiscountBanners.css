@@ -1,0 +1,189 @@
+.mp-discount-section {
+    padding: 40px 0;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.mp-discount-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 24px;
+}
+
+/* Shared Card Styling */
+.mp-discount-card {
+    position: relative;
+    border-radius: 20px;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+    padding: 40px;
+}
+
+/* Background Variations */
+.mp-card-pink {
+    background-color: #f7e9e6; 
+}
+
+.mp-card-yellow {
+    background-color: #fffdf5; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* -------------------------------------------
+   Absolute Image Positioning
+---------------------------------------------- */
+.mp-discount-img {
+    position: absolute;
+    z-index: 1;
+    object-fit: contain;
+}
+
+.mp-img-left {
+    left: -20px;
+    bottom: -20px;
+    height: 120%; 
+}
+
+.mp-img-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 130%; 
+}
+
+/* -------------------------------------------
+   Content & Layout (Above Images)
+---------------------------------------------- */
+.mp-discount-content {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mp-content-right {
+    margin-left: auto;
+    max-width: 55%;
+}
+
+.mp-content-left {
+    margin-right: auto;
+    max-width: 55%;
+}
+
+.mp-brand-logo {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.mp-brand-logo img {
+    max-width: 60%;
+    object-fit: contain;
+}
+
+/* Typography */
+.mp-discount-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1e293b; 
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+}
+
+.mp-discount-subtitle {
+    font-size: 14px;
+    color: #0f172a;
+    font-weight: 500;
+    margin: 0 0 24px 0;
+}
+
+.mp-text-gray {
+    color: #4b5563;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+.mp-text-green {
+    color: #22c55e;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+/* Buttons */
+.mp-btn-discount {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.mp-btn-green {
+    background-color: #22c55e;
+    color: #ffffff;
+}
+
+.mp-btn-green:hover {
+    background-color: #16a34a;
+}
+
+.mp-btn-white {
+    background-color: #ffffff;
+    color: #1e293b;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.mp-btn-white:hover {
+    background-color: #f8fafc;
+    box-shadow: 0 6px 10px -1px rgba(0,0,0,0.08);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 992px) {
+    .mp-discount-card {
+        padding: 30px;
+    }
+    
+    .mp-content-right, .mp-content-left {
+        max-width: 65%; 
+    }
+}
+
+@media (max-width: 576px) {
+    .mp-discount-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 180px; 
+    }
+
+    .mp-content-right, .mp-content-left {
+        max-width: 100%;
+        margin: 0;
+        align-items: center;
+    }
+
+    .mp-img-left, .mp-img-right {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: auto;
+        right: auto;
+        height: 160px;
+    }
+}

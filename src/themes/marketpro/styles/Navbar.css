@@ -1,0 +1,158 @@
+/* Navbar Container */
+.mp-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.mp-navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.mp-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+
+/* Browse Categories Button */
+.mp-category-btn {
+    background-color: #22c55e; 
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 20px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mp-category-btn:hover {
+    background-color: #16a34a;
+}
+
+.mp-icon, .mp-icon-caret {
+    font-size: 18px;
+    display: flex;
+}
+
+/* Navigation Links */
+.mp-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.mp-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mp-nav-link {
+    text-decoration: none;
+    color: #1f2937; 
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.mp-nav-link:hover {
+    color: #1b7b9b; 
+}
+
+.mp-dropdown-icon {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* Floating Badges */
+.mp-nav-badge {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* Little triangle pointer for the badge */
+.mp-nav-badge::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+    border-width: 4px 4px 0;
+    border-style: solid;
+}
+
+/* Specific Badge Colors */
+.mp-badge-peach {
+    background-color: #fcd34d; 
+    color: #ffffff;
+}
+.mp-badge-peach::after {
+    border-color: #fcd34d transparent transparent transparent;
+}
+
+.mp-badge-purple {
+    background-color: #a78bfa; 
+}
+.mp-badge-purple::after {
+    border-color: #a78bfa transparent transparent transparent;
+}
+
+/* Right Side Support/Contact */
+.mp-navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.mp-support-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mp-support-icon {
+    font-size: 28px;
+    color: #1b7b9b; 
+    display: flex;
+}
+
+.mp-support-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.mp-support-title {
+    font-size: 13px;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.mp-support-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1b7b9b; 
+    text-decoration: none;
+}

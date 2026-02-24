@@ -1,0 +1,130 @@
+.mp-promo-banners-section {
+    padding: 40px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.mp-pb-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 24px;
+}
+
+.mp-pb-card {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 280px; 
+    position: relative;
+}
+
+.mp-pb-card-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Precise Text Positioning for Left Card */
+.mp-pb-card-bg .mp-content-right {
+    padding: 40px;
+    max-width: 60%; 
+    margin-left: auto; 
+    text-align: left;
+}
+
+/* Precise Text Positioning for Right Card */
+.mp-pb-card-bg .mp-content-left {
+    padding: 40px;
+    max-width: 60%; 
+    text-align: left;
+}
+
+.mp-pb-content {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.mp-pb-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.mp-pb-subtitle {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* Timer Boxes Styling */
+.mp-pb-timer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.mp-pb-time-box {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 52px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.box-white {
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+.box-teal {
+    background-color: #1b7b9b;
+    color: #ffffff;
+}
+
+.mp-pb-colon {
+    font-weight: 800;
+    color: #1e293b;
+}
+
+/* Buttons */
+.mp-pb-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-teal { background-color: #1b7b9b; color: #fff; }
+.btn-green { background-color: #22c55e; color: #fff; }
+
+.mp-pb-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .mp-pb-card-bg .mp-content-left,
+    .mp-pb-card-bg .mp-content-right {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 640px) {
+    .mp-pb-grid { grid-template-columns: 1fr; }
+    .mp-pb-card-bg .mp-content-left,
+    .mp-pb-card-bg .mp-content-right {
+        max-width: 100%;
+        margin: 0;
+        padding: 30px;
+    }
+}

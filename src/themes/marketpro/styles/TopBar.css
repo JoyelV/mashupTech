@@ -1,0 +1,97 @@
+/* Container alignment */
+.mp-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* TopBar Main Wrapper with Teal Color */
+.mp-topbar {
+  background-color: #1b7b9b; 
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.mp-topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left Side Styling */
+.mp-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mp-sale-timer strong {
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.mp-highlight {
+  color: #fcd34d; 
+  font-weight: 600;
+}
+
+/* Right Side Menu Styling */
+.mp-topbar-right .mp-topbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mp-topbar-right .mp-topbar-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s;
+}
+
+.mp-topbar-right .mp-topbar-menu li a:hover {
+  opacity: 0.8;
+}
+
+/* Separator styling */
+.mp-separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+/* Dropdown specific styles */
+.mp-dropdown {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  appearance: none; 
+}
+
+.mp-dropdown option {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .mp-topbar-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .mp-topbar-left {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

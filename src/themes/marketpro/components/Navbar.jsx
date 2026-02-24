@@ -1,44 +1,66 @@
 import React from 'react';
+import '../styles/Navbar.css';
 
 const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'Shop', href: '#' },
-    { label: 'Pages', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Contact Us', href: '#' },
+    { label: 'Home', href: '/', badge: null, badgeColor: null, hasDropdown: true },
+    { label: 'Shop', href: '/shop', badge: null, badgeColor: null, hasDropdown: true },
+    { label: 'Pages', href: '/pages', badge: 'New', badgeColor: 'peach', hasDropdown: true },
+    { label: 'Vendors', href: '/vendors', badge: 'New', badgeColor: 'purple', hasDropdown: true },
+    { label: 'Blog', href: '/blog', badge: null, badgeColor: null, hasDropdown: true },
+    { label: 'Contact Us', href: '/contact', badge: null, badgeColor: null, hasDropdown: false },
 ];
 
 function Navbar() {
     return (
-        <nav className="mp-nav-bar-area">
-            <div className="container">
-                <div className="mp-nav-inner">
-                    <div className="mp-cat-btn-wrap">
-                        <div className="mp-all-cats-btn">
-                            <i className="fa-light fa-bars"></i>
-                            <span>Browse All Categories</span>
+        <nav className="mp-navbar border-bottom">
+            <div className="mp-container">
+                <div className="mp-navbar-inner">
+                    
+                    {/* Left: Category Button & Main Menu */}
+                    <div className="mp-navbar-left">
+                        
+                        {/* Browse Categories Button */}
+                        <button type="button" className="mp-category-btn">
+                            <span className="mp-icon"><i className="ph ph-squares-four"></i></span>
+                            <span className="mp-btn-text">Browse Categories</span>
+                            <span className="mp-icon-caret"><i className="ph ph-caret-down"></i></span>
+                        </button>
+
+                        {/* Main Menu Links */}
+                        <ul className="mp-nav-menu">
+                            {navLinks.map((link, index) => (
+                                <li key={index} className="mp-nav-item">
+                                    {link.badge && (
+                                        <span className={`mp-nav-badge mp-badge-${link.badgeColor}`}>
+                                            {link.badge}
+                                        </span>
+                                    )}
+                                    <a href={link.href} className="mp-nav-link">
+                                        {link.label}
+                                        {link.hasDropdown && (
+                                            <i className="ph ph-caret-down mp-dropdown-icon"></i>
+                                        )}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Right: Support/Contact Section */}
+                    <div className="mp-navbar-right">
+                        <div className="mp-support-box">
+                            <div className="mp-support-icon">
+                                <i className="ph ph-device-mobile"></i> 
+                            </div>
+                            <div className="mp-support-text">
+                                <span className="mp-support-title">Need any Help! call Us</span>
+                                <a href="tel:+2871382023" className="mp-support-number">
+                                    +(2) 871 382 023
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="mp-nav-main-links">
-                        {navLinks.map((l) => (
-                            <a key={l.label} href={l.href} className={l.cls || ''}>
-                                {l.label}
-                                {l.label === 'Shop' && <span className="nav-badge hot">Hot</span>}
-                                {l.label === 'Pages' && <span className="nav-badge new">New</span>}
-                            </a>
-                        ))}
-                    </div>
-
-                    <div className="mp-nav-support">
-                        <div className="icon">
-                            <i className="fa-light fa-headset"></i>
-                        </div>
-                        <div className="text">
-                            <span className="phone">+2) 871 382 023</span>
-                            <span className="label">24/7 Support Center</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>

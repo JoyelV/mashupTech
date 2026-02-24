@@ -3,7 +3,6 @@
 /* ===== EKOMART – GREEN GROCERY THEME ===== */
 
 :root {
-    /* Exact theme colors from original */
     --eko-primary: #629D23;
     --eko-secondary: #FF8F3C;
     --eko-dark: #1F1F25;
@@ -84,7 +83,7 @@
 }
 
 /* ============================================================
-   TOP SECTION — Precision CSS matched to screenshot
+   TOP SECTION 
    ============================================================ */
 
 /* --- TopBar: .head-top --- */
@@ -2980,7 +2979,7 @@
 }
 
 /* ============================================================
-   FOOTER — Precision CSS matched to screenshot
+   FOOTER 
    ============================================================ */
 
 .rts-footer-one {

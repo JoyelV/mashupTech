@@ -1,0 +1,96 @@
+/* Container styling */
+.brands-section {
+  font-family: sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header layout */
+.brands-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.brands-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0b1c3c; 
+  font-weight: 600;
+}
+
+.brands-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.view-deals-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.view-deals-link:hover {
+  color: #0b1c3c;
+}
+
+.brands-nav-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #666;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  border-color: #999;
+  color: #333;
+}
+
+/* Carousel Container */
+.brands-carousel-container {
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.brands-list {
+  display: flex;
+  gap: 24px;
+  padding: 10px 0; 
+}
+
+/* Individual Brand Items */
+.brand-item {
+  flex: 0 0 auto; 
+  width: 140px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

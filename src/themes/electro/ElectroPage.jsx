@@ -28,7 +28,6 @@ function ElectroPage() {
             <Header />
             <Navbar />
             <HeroBanner />
-            
             <FeaturedProducts />
             <CategoryBoxes />
             <Bestsellers />

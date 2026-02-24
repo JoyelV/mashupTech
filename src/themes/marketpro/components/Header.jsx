@@ -1,60 +1,85 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import logo from "../assets/images/marketpro-logo.png";
+import "../styles/Header.css"; 
 
 function Header() {
-    const [cartCount] = useState(5);
-    const [wishCount] = useState(2);
+  const [cartCount] = useState(2);
+  const [wishCount] = useState(2);
 
-    return (
-        <header className="mp-header">
-            <div className="container">
-                <div className="mp-logo">
-                    <img src="https://marketpro-nextjs.vercel.app/assets/images/logo/logo.png" alt="MarketPro" style={{ height: '35px' }}
-                        onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
-                    <div style={{ display: 'none' }}>
-                        <span className="market">Market</span><span className="pro">Pro</span>
-                    </div>
-                </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
-                <form className="mp-search" onSubmit={(e) => e.preventDefault()}>
-                    <div className="search-cat-select">
-                        <select>
-                            <option>All Categories</option>
-                            <option>Electronics</option>
-                            <option>Fashion</option>
-                            <option>Home</option>
-                        </select>
-                    </div>
-                    <input type="text" placeholder="Search products, brands, vendors..." />
-                    <button type="submit">
-                        <i className="fa-regular fa-magnifying-glass"></i>
-                    </button>
-                </form>
+  return (
+    <header className="mp-header-main border-bottom">
+      <div className="mp-container">
+        <div className="mp-header-inner">
+          
+          {/* 1. Logo */}
+          <div className="mp-logo">
+            <a href="/">
+              <img src={logo} alt="MarketPro Logo" />
+            </a>
+          </div>
 
-                <div className="mp-header-actions">
-                    <div className="mp-action-item">
-                        <i className="fa-light fa-arrows-rotate"></i>
-                    </div>
-                    <div className="mp-action-item">
-                        <i className="fa-light fa-heart"></i>
-                        <span className="mp-badge">{wishCount}</span>
-                    </div>
-                    <div className="mp-action-item">
-                        <i className="fa-light fa-user"></i>
-                    </div>
-                    <div className="mp-action-item mp-cart-btn">
-                        <div className="cart-icon-wrap">
-                            <i className="fa-light fa-cart-shopping"></i>
-                            <span className="mp-badge">{cartCount}</span>
-                        </div>
-                        <div className="cart-text">
-                            <span className="label">Your Cart</span>
-                            <span className="value">$280.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
+          {/* 2. Search Form */}
+          <div className="mp-search-wrapper">
+            <form onSubmit={handleSubmit} className="mp-search-form">
+              
+              <div className="mp-category-dropdown">
+                <select defaultValue="">
+                  <option value="" disabled>All categories</option>
+                  <option>Vegetables</option>
+                  <option>Milk & Cake</option>
+                  <option>Grocery</option>
+                  <option>Beauty</option>
+                  <option>Fruits</option>
+                </select>
+              </div>
+
+              <input
+                type="text"
+                className="mp-search-input"
+                placeholder=""
+              />
+
+              <button type="submit" className="mp-search-btn">
+                <i className="ph ph-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+
+          {/* 3. Right Actions */}
+          <div className="mp-header-actions">
+            
+            <a href="/profile" className="mp-action-item">
+              <div className="mp-icon-wrapper">
+                <i className="ph ph-user"></i>
+              </div>
+              <span>Profile</span>
+            </a>
+
+            <a href="/wishlist" className="mp-action-item">
+              <div className="mp-icon-wrapper">
+                <i className="ph ph-heart"></i>
+                <span className="mp-badge">{wishCount}</span>
+              </div>
+              <span>Wishlist</span>
+            </a>
+
+            <a href="/cart" className="mp-action-item">
+              <div className="mp-icon-wrapper">
+                <i className="ph ph-shopping-cart-simple"></i>
+                <span className="mp-badge">{cartCount}</span>
+              </div>
+              <span>Cart</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;

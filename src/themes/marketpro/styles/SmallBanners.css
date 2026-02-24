@@ -1,0 +1,120 @@
+/* Section Padding */
+.mp-promotional-banner-section {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Flexbox Row System (Replacing Bootstrap's .row) */
+.mp-promo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0 -12px; /* Offset the padding on columns */
+}
+
+/* Flexbox Columns (Replacing col-xl-3 col-sm-6) */
+.mp-promo-col {
+    flex: 1 0 22%; /* Approx 4 columns */
+    padding: 0 12px;
+    min-width: 280px; /* Forces wrap on smaller screens */
+}
+
+@media (max-width: 992px) {
+    .mp-promo-col {
+        flex: 1 0 45%; /* 2 columns on tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .mp-promo-col {
+        flex: 1 0 100%; /* 1 column on mobile */
+    }
+}
+
+/* The Card Wrapper */
+.mp-promo-banner-item {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 250px;
+    padding: 52px 24px 52px 40px; /* matches py-52 ps-40 pe-24 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Full Background Image */
+.mp-promo-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Pushes image behind text */
+}
+
+/* Content Layout */
+.mp-promo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Typography */
+.mp-promo-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 16px 0;
+    max-width: 184px; /* Forces wrap on longer words like 'Vegetables' */
+    line-height: 1.3;
+}
+
+.mp-promo-price-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.mp-promo-starting {
+    font-size: 14px;
+    font-style: italic;
+    color: #4b5563;
+}
+
+.mp-promo-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ef4444; /* text-danger-600 equivalent */
+    margin: 0;
+}
+
+/* Main Shop Button */
+.mp-btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1b7b9b; /* Teal */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 50px; /* rounded-pill */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.mp-btn-main:hover {
+    background-color: #145e76;
+    color: #ffffff;
+}
+
+.mp-btn-icon {
+    display: flex;
+    font-size: 18px;
+}

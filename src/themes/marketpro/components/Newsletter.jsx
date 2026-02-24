@@ -1,42 +1,52 @@
 import React, { useState } from 'react';
+import '../styles/Newsletter.css';
+import img1 from '../assets/images/newsletter/newsletter-img.png';
+
+const basketImg = img1;
 
 function Newsletter() {
     const [email, setEmail] = useState('');
-    const [done, setDone] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubscribe = (e) => {
         e.preventDefault();
-        if (email) setDone(true);
+        console.log('Subscribing email:', email);
     };
 
     return (
-        <section className="mp-newsletter-banner">
-            <div className="container">
-                <div className="newsletter-wrap">
-                    <div className="newsletter-content">
-                        <h2 className="title">Stay home & get your daily <br />needs from our shop</h2>
-                        <p className="subtitle">Start You'r Daily Shopping with <span>MarketPro</span></p>
-                        {done ? (
-                            <p style={{ color: '#fff', fontWeight: 700 }}>✅ Thank you for subscribing! Check your email.</p>
-                        ) : (
-                            <form className="newsletter-form" onSubmit={handleSubmit}>
-                                <div className="input-group">
-                                    <i className="fa-light fa-paper-plane"></i>
-                                    <input
-                                        type="email"
-                                        placeholder="Your Email Address"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                    />
-                                    <button type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                        )}
+        <section className="mp-newsletter-section py-60">
+            <div className="mp-container">
+                <div className="mp-newsletter-banner">
+                    
+                    {/* Left Side: Content & Form */}
+                    <div className="mp-newsletter-content">
+                        <h2 className="mp-newsletter-title">
+                            Stay home & get your daily needs from our shop
+                        </h2>
+                        
+                        <form className="mp-newsletter-form" onSubmit={handleSubscribe}>
+                            <input 
+                                type="email" 
+                                placeholder="Enter your mail" 
+                                className="mp-newsletter-input"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <button type="submit" className="mp-newsletter-btn">
+                                Subscribe now
+                            </button>
+                        </form>
+
+                        <p className="mp-newsletter-agreement">
+                            I agree that my submitted data is being collected and stored.
+                        </p>
                     </div>
-                    <div className="newsletter-img">
-                        <img src="https://marketpro-nextjs.vercel.app/assets/images/banner/banner-img4.png" alt="Delivery" />
+
+                    {/* Right Side: Large Graphic */}
+                    <div className="mp-newsletter-img-wrap">
+                        <img src={basketImg} alt="Fresh Groceries" />
                     </div>
+
                 </div>
             </div>
         </section>

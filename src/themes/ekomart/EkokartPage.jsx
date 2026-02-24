@@ -24,8 +24,6 @@ function EkomartPage() {
                 <Link to="/" style={{ color: '#629D23', fontWeight: 700 }}>← Back to Theme Selector</Link>
                 {' '} | You are viewing: <strong>Ekomart – Grocery Store Theme</strong>
             </div>
-
-            {/* Page sections — ordered exactly as screenshot */}
             <Header />
             <Navbar/>
             <InfoStrip />

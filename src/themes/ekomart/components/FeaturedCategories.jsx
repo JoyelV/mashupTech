@@ -14,7 +14,6 @@ function FeaturedCategories() {
   return (
     <div className="rts-category-area rts-section-gapTop">
       <div className="container-2">
-
         {/* Title Row */}
         <div className="row">
           <div className="col-lg-12">
@@ -23,12 +22,12 @@ function FeaturedCategories() {
 
               <div className="next-prev-swiper-wrapper">
                 <div className="custom-prev" ref={prevRef}>
-<i className="fa-solid fa-chevron-left"></i>
-</div>
+                  <i className="fa-solid fa-chevron-left"></i>
+                </div>
 
-<div className="custom-next" ref={nextRef}>
-<i className="fa-solid fa-chevron-right"></i>
-</div>
+                <div className="custom-next" ref={nextRef}>
+                  <i className="fa-solid fa-chevron-right"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -38,16 +37,15 @@ function FeaturedCategories() {
         <div className="row">
           <div className="col-lg-12">
             <div className="cover-card-main-over">
-
               <Swiper
                 modules={[Navigation]}
                 spaceBetween={12}
                 slidesPerView={6}
                 loop={true}
                 onBeforeInit={(swiper) => {
-  swiper.params.navigation.prevEl = prevRef.current;
-  swiper.params.navigation.nextEl = nextRef.current;
-}}
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                }}
                 breakpoints={{
                   0: { slidesPerView: 2 },
                   576: { slidesPerView: 3 },
@@ -66,11 +64,9 @@ function FeaturedCategories() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

@@ -1,33 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import '../styles/PromoCountdownBanners.css';
+import img1 from '../assets/images/promo-count-down/flash-sale-bg1.png';
+import img2 from '../assets/images/promo-count-down/flash-sale-bg2.png';
+
+const imgPasta = img1;
+const bgVegetables = img2;
 
 function PromoCountdownBanners() {
-    const calculateTimeLeft = () => {
-        return {
-            days: 675,
-            hours: 14,
-            minutes: 5,
-            seconds: 18
-        };
-    };
-
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [timeLeft, setTimeLeft] = useState({ days: 673, hours: 4, minutes: 30, seconds: 33 });
 
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeLeft(prev => {
                 let { days, hours, minutes, seconds } = prev;
-                seconds--;
-                if (seconds < 0) {
+                if (seconds > 0) seconds--;
+                else {
                     seconds = 59;
-                    minutes--;
-                }
-                if (minutes < 0) {
-                    minutes = 59;
-                    hours--;
-                }
-                if (hours < 0) {
-                    hours = 23;
-                    days--;
+                    if (minutes > 0) minutes--;
+                    else {
+                        minutes = 59;
+                        if (hours > 0) hours--;
+                        else {
+                            hours = 23;
+                            if (days > 0) days--;
+                        }
+                    }
                 }
                 return { days, hours, minutes, seconds };
             });
@@ -35,57 +32,61 @@ function PromoCountdownBanners() {
         return () => clearInterval(timer);
     }, []);
 
-    const banners = [
-        {
-            id: 1,
-            title: 'X-Connect Smart Television',
-            subtitle: 'Time remaining until the end of the offer.',
-            img: 'https://marketpro-nextjs.vercel.app/assets/images/banner/banner-img1.png', // Fallback to a placeholder if needed
-            btnCls: 'btn-teal',
-            bg: '#F2F6F9'
-        },
-        {
-            id: 2,
-            title: 'Vegetables Combo Box',
-            subtitle: 'Time remaining until the end of the offer.',
-            img: 'https://marketpro-nextjs.vercel.app/assets/images/banner/banner-img2.png',
-            btnCls: 'btn-green',
-            bg: '#FDF7EB'
-        }
-    ];
-
     return (
-        <section className="mp-promo-countdown-area">
-            <div className="container">
-                <div className="promo-grid">
-                    {banners.map(banner => (
-                        <div key={banner.id} className="promo-card" style={{ background: banner.bg }}>
-                            <div className="promo-content">
-                                <h3 className="title">{banner.title}</h3>
-                                <p className="subtitle">{banner.subtitle}</p>
-                                <div className="countdown-wrap">
-                                    <div className="time-box">
-                                        <span className="value">{timeLeft.days} D</span>
-                                    </div>
-                                    <div className="time-box">
-                                        <span className="value">{String(timeLeft.hours).padStart(2, '0')} H</span>
-                                    </div>
-                                    <div className="time-box">
-                                        <span className="value">{String(timeLeft.minutes).padStart(2, '0')} M</span>
-                                    </div>
-                                    <div className="time-box">
-                                        <span className="value">{String(timeLeft.seconds).padStart(2, '0')} S</span>
-                                    </div>
-                                </div>
-                                <a href="/shop" className={`rts-btn ${banner.btnCls}`}>
-                                    Shop Now <i className="fa-regular fa-arrow-right"></i>
-                                </a>
+        <section className="mp-promo-banners-section py-40">
+            <div className="mp-container">
+                <div className="mp-pb-grid">
+                    
+                    {/* Left Banner: Pasta */}
+                    <div 
+                        className="mp-pb-card mp-pb-card-bg" 
+                        style={{ backgroundImage: `url(${imgPasta})` }}
+                    >
+                        <div className="mp-pb-content mp-content-right">
+                            <h3 className="mp-pb-title">X-Connect Smart Television</h3>
+                            <p className="mp-pb-subtitle">Time remaining until the end of the offer.</p>
+                            
+                            <div className="mp-pb-timer">
+                                <div className="mp-pb-time-box box-white">{timeLeft.days} D</div>
+                                <span className="mp-pb-colon">:</span>
+                                <div className="mp-pb-time-box box-white">{timeLeft.hours} H</div>
+                                <span className="mp-pb-colon">:</span>
+                                <div className="mp-pb-time-box box-white">{timeLeft.minutes} M</div>
+                                <span className="mp-pb-colon">:</span>
+                                <div className="mp-pb-time-box box-white">{timeLeft.seconds} S</div>
                             </div>
-                            <div className="promo-img">
-                                <img src={banner.img} alt={banner.title} />
-                            </div>
+
+                            <a href="/shop" className="mp-pb-btn btn-teal">
+                                Shop Now <i className="ph ph-arrow-right"></i>
+                            </a>
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Right Banner: Combo Box */}
+                    <div 
+                        className="mp-pb-card mp-pb-card-bg" 
+                        style={{ backgroundImage: `url(${bgVegetables})` }}
+                    >
+                        <div className="mp-pb-content mp-content-left">
+                            <h3 className="mp-pb-title">Vegetables Combo Box</h3>
+                            <p className="mp-pb-subtitle text-dark">Time remaining until the end of the offer.</p>
+                            
+                            <div className="mp-pb-timer">
+                                <div className="mp-pb-time-box box-teal">{timeLeft.days} D</div>
+                                <span className="mp-pb-colon">:</span>
+                                <div className="mp-pb-time-box box-teal">{timeLeft.hours} H</div>
+                                <span className="mp-pb-colon">:</span>
+                                <div className="mp-pb-time-box box-teal">{timeLeft.minutes} M</div>
+                                <span className="mp-pb-colon">:</span>
+                                <div className="mp-pb-time-box box-teal">{timeLeft.seconds} S</div>
+                            </div>
+
+                            <a href="/shop" className="mp-pb-btn btn-green">
+                                Shop Now <i className="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

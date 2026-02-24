@@ -36,7 +36,6 @@
 }
 
 /* MAIN HEADER */
-/* MAIN HEADER */
 .main-header {
   background: #5ca617;
   padding: 18px 0;
@@ -168,7 +167,6 @@
     position: relative; 
 }
 
-/* Category button (the "Categories" trigger) */
 .category-btn.category-hover-header {
   display: flex;
   align-items: center;
@@ -190,7 +188,7 @@ border-radius: 5px 0 0 5px;
 
 /* Hover effect on main button */
 .category-hover-header:hover {
-  background: var(--color-primary, #629d23) !important;  /* replace with your primary color if defined */
+  background: var(--color-primary, #629d23) !important;  
   color: #ffffff !important;
 }
 
@@ -213,7 +211,7 @@ border-radius: 5px 0 0 5px;
 
 .category-btn.category-hover-header {
   position: relative;
-  z-index: 1000;   /* ensure above search */
+  z-index: 1000;  
 }
 
 /* Submenu list items */
@@ -221,13 +219,12 @@ border-radius: 5px 0 0 5px;
   margin: 0;
 }
 
-/* Submenu links – this is the most important missing part */
 .category-sub-menu .submenu li a {
   display: block;
-  padding: 10px 44px;           /* more left padding to indent under parent */
-  color: #4a4a4a;               /* darker gray – easier to read than pure black */
-  font-size: 14px;              /* slightly smaller than main items */
-  font-weight: 400;             /* not bold */
+  padding: 10px 44px;          
+  color: #4a4a4a;              
+  font-size: 14px;           
+  font-weight: 400;            
   text-decoration: none;
   transition: all 0.2s ease;
   background: transparent;
@@ -236,18 +233,16 @@ border-radius: 5px 0 0 5px;
 /* Hover effect for submenu items */
 .category-sub-menu .submenu li a:hover {
   background: #f8fafc;
-  color: #5ca617;               /* use your brand green */
-  padding-left: 48px;           /* nice little slide-in effect */
+  color: #5ca617;            
+  padding-left: 48px;          
 }
 
-/* Optional: active / current state if you add routing later */
 .category-sub-menu .submenu li a.active {
   color: #5ca617;
   font-weight: 600;
   background: #f0f7eb;
 }
 
-/* Fix main category button – make sure it's <button> not <a> */
 .category-sub-menu li button.menu-item {
   width: 100%;
   text-align: left;
@@ -270,10 +265,9 @@ border-radius: 5px 0 0 5px;
 }
 
 .category-sub-menu li button.menu-item:hover img {
-  filter: brightness(0) invert(1);   /* white icons on green bg */
+  filter: brightness(0) invert(1);  
 }
 
-/* Plus icon styling (you used <span className="plus">+</span>) */
 .category-sub-menu .plus {
   margin-left: auto;
   font-size: 18px;
@@ -284,11 +278,10 @@ border-radius: 5px 0 0 5px;
 
 .category-sub-menu button.menu-item[aria-expanded="true"] .plus,
 .category-sub-menu button.menu-item.active .plus {
-  transform: rotate(45deg);     /* optional: + → × when open */
+  transform: rotate(45deg);     
   color: white;
 }
 
-/* When main category is hovered/opened – optional accent */
 .category-sub-menu li:has(button.menu-item:hover),
 .category-sub-menu li:has(button.menu-item[aria-expanded="true"]) {
   background: #f8fafc;
@@ -297,17 +290,17 @@ border-radius: 5px 0 0 5px;
 /* Search form */
 .search-header {
   position: relative;
-  flex: 1;               /* or flex-basis: 70% if you want to keep proportion */
+  flex: 1;               
 }
 
 .search-header input {
-  width: 100%;           /* better than fixed 802px – make it responsive */
+  width: 100%;          
   max-width: 802px;
   height: 50px;
   background: #F3F4F6;
   border: 1px solid transparent;
   border-radius: 0 5px 5px 0;
-  padding: 0 150px 0 20px;   /* space for button */
+  padding: 0 150px 0 20px;  
   font-size: 16px;
 }
 
@@ -337,7 +330,7 @@ border-radius: 5px 0 0 5px;
 }
 
 .search-header button:hover {
-  background: #557f1d;   /* darker shade – adjust to your theme */
+  background: #557f1d;   
 }
 
 .compare-number.number {
