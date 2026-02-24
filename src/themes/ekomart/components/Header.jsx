@@ -154,12 +154,12 @@ const Header = () => {
           </div>
 
     {/* Right Actions */}
-    <div className="account-wishlist-cart-area-header">
+      <div className="account-wishlist-cart-area-header">
       <a className="btn-border-only account" href="/account">
         <i className="fa-solid fa-user"></i> 
         <span>Account</span>
       </a>
-      <a className="btn-border-only account compare-number"><i className="fa-solid fa-code-compare"></i><span className="number">0</span></a>
+      <a className="btn-border-only account compare-number" href="/compare"><i className="fa-solid fa-code-compare"></i><span className="number">0</span></a>
       <div className="btn-border-only cart category-hover-header"><i className="fa-solid fa-heart"></i><span className="text">Wishlist</span><span className="number">0</span></div>
       <div className="btn-border-only cart category-hover-header"><i className="fa-sharp fa-solid fa-cart-shopping"></i><span className="text">Cart</span><span className="number">0</span>
       </div>

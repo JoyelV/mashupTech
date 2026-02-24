@@ -12,10 +12,10 @@ function Footer() {
                             </div>
                             <p>Your ultimate electronics destination. We offer the best tech products from top global brands with fast shipping and easy returns.</p>
                             <div className="el-footer-socials">
-                                <a href="#">📘</a>
-                                <a href="#">🐦</a>
-                                <a href="#">📸</a>
-                                <a href="#">▶️</a>
+                                <a href="/">📘</a>
+                                <a href="/">🐦</a>
+                                <a href="/">📸</a>
+                                <a href="/">▶️</a>
                             </div>
                         </div>
 
@@ -23,7 +23,7 @@ function Footer() {
                             <h4>Products</h4>
                             <ul>
                                 {['Laptops & PCs', 'Smartphones', 'Tablets', 'Audio & Headphones', 'Cameras'].map(l => (
-                                    <li key={l}><a href="#">{l}</a></li>
+                                    <li key={l}><a href="/">{l}</a></li>
                                 ))}
                             </ul>
                         </div>
@@ -32,7 +32,7 @@ function Footer() {
                             <h4>Support</h4>
                             <ul>
                                 {['Track My Order', 'Returns & Refunds', 'Warranty Claims', 'Live Chat', 'FAQ'].map(l => (
-                                    <li key={l}><a href="#">{l}</a></li>
+                                    <li key={l}><a href="/">{l}</a></li>
                                 ))}
                             </ul>
                         </div>
@@ -41,7 +41,7 @@ function Footer() {
                             <h4>Company</h4>
                             <ul>
                                 {['About Electro', 'Careers', 'Press Center', 'Privacy Policy', 'Terms of Service'].map(l => (
-                                    <li key={l}><a href="#">{l}</a></li>
+                                    <li key={l}><a href="/">{l}</a></li>
                                 ))}
                             </ul>
                         </div>

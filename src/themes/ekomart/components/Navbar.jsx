@@ -10,14 +10,14 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="container nav-flex">
           <div className="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Shop</a>
-            <a href="#">Vendors</a>
-            <a href="#">Pages</a>
-            <a href="#">Blog</a>
-            <a href="#">Dashboard</a>
-            <a href="#">Contact</a>
+            <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/">Shop</a>
+            <a href="/">Vendors</a>
+            <a href="/">Pages</a>
+            <a href="/">Blog</a>
+            <a href="/">Dashboard</a>
+            <a href="/">Contact</a>
           </div>
 
           <div className="delivery">

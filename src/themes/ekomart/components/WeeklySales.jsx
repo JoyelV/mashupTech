@@ -5,16 +5,6 @@ import "../styles/WeeklySales.css";
 
 const tabs = ["All", "Baking material", "Milks & Dairies", "Vagetable"];
 
-function StarRating() {
-  return (
-    <div className="star-rating">
-      {[...Array(5)].map((_, i) => (
-        <i key={i} className="fa-solid fa-star"></i>
-      ))}
-    </div>
-  );
-}
-
 function WeeklySales() {
   const [activeTab, setActiveTab] = useState("All");
 

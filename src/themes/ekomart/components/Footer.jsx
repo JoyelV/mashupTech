@@ -40,11 +40,11 @@ function Footer() {
 
               <div className="social-style-dash">
                 <ul>
-                  <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="/"><i className="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="/"><i className="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="/"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="/"><i className="fa-brands fa-youtube"></i></a></li>
+                  <li><a href="/"><i className="fa-brands fa-instagram"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -53,11 +53,11 @@ function Footer() {
             <div className="single-footer-wized mid">
               <h3 className="footer-title">Our Stores</h3>
               <ul>
-                <li><a href="#">Delivery Information</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Support Center</a></li>
-                <li><a href="#">Careers</a></li>
+                <li><a href="/">Delivery Information</a></li>
+                <li><a href="/">Privacy Policy</a></li>
+                <li><a href="/">Terms & Conditions</a></li>
+                <li><a href="/">Support Center</a></li>
+                <li><a href="/">Careers</a></li>
               </ul>
             </div>
 
@@ -65,11 +65,11 @@ function Footer() {
             <div className="single-footer-wized mid">
               <h3 className="footer-title">Shop Categories</h3>
               <ul>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Information</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Nest Stories</a></li>
+                <li><a href="/">Contact Us</a></li>
+                <li><a href="/">Information</a></li>
+                <li><a href="/">About Us</a></li>
+                <li><a href="/">Careers</a></li>
+                <li><a href="/">Nest Stories</a></li>
               </ul>
             </div>
 
@@ -129,8 +129,8 @@ function Footer() {
       <div className="rts-copyright-area-two">
         <div className="container-2">
           <div className="copyright-arae-two-wrapper">
-            <p>
-              Copyright 2025 <a href="#">©Ekomart</a>. All rights reserved.
+              <p>
+              Copyright 2025 <a href="/">©Ekomart</a>. All rights reserved.
             </p>
 
             <div className="payment-processw-area">

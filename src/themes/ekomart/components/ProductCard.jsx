@@ -11,7 +11,7 @@ function ProductCard({ product }) {
       )}
 
       <div className="image-and-action-area-wrapper">
-        <a className="thumbnail-preview" href="#">
+        <a className="thumbnail-preview" href="/">
           <img src={product.img} alt={product.name} />
         </a>
       </div>
@@ -24,7 +24,7 @@ function ProductCard({ product }) {
           ))}
         </div>
 
-        <a href="#">
+        <a href="/">
           <h4 className="title">{product.name}</h4>
         </a>
 

@@ -14,7 +14,7 @@ function HeroBanner() {
                         <span className="tag">🔥 Limited Time Deals</span>
                         <h1>Shop from <span>1000+</span><br />Top Vendors & Brands</h1>
                         <p>Discover the best products from verified sellers. Compare prices, read reviews, and shop with confidence on MarketPro.</p>
-                        <a href="#" className="mp-btn-primary">
+                        <a href="/" className="mp-btn-primary">
                             Start Shopping <i className="fa-regular fa-arrow-right"></i>
                         </a>
                     </div>

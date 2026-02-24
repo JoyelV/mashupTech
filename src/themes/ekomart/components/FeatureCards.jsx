@@ -9,14 +9,14 @@ function FeatureCards() {
 
           {/* CARD 1 */}
           <div className="single-feature-card ssthree style-three bg_image one">
-            <div className="content-area">
-<a className="rts-btn btn-primary discount-badge" >Weekend Discount</a>
+                <div className="content-area">
+                  <a href="/" className="rts-btn btn-primary discount-badge">Weekend Discount</a>
               <h3 className="title">
                 Drink Fresh Corn Juice <br />
                 <span>Good Taste</span>
               </h3>
 
-              <a href="/shop" className="shop-now-btn">
+                  <a href="/" className="shop-now-btn">
                 <div className="plus-icon">+</div>
                 Shop Now
               </a>

@@ -20,21 +20,21 @@ function Footer() {
                         <div className="footer-col">
                             <h4 className="title">Information</h4>
                             <ul>
-                                <li><a href="#">Company Profile</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Our Blog</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="/">Company Profile</a></li>
+                                <li><a href="/">About Us</a></li>
+                                <li><a href="/">Help Center</a></li>
+                                <li><a href="/">Our Blog</a></li>
+                                <li><a href="/">Contact Us</a></li>
                             </ul>
                         </div>
                         <div className="footer-col">
                             <h4 className="title">Support</h4>
                             <ul>
-                                <li><a href="#">Live Chat</a></li>
-                                <li><a href="#">Support Ticket</a></li>
-                                <li><a href="#">Service Guideline</a></li>
-                                <li><a href="#">Tally Management</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="/">Live Chat</a></li>
+                                <li><a href="/">Support Ticket</a></li>
+                                <li><a href="/">Service Guideline</a></li>
+                                <li><a href="/">Tally Management</a></li>
+                                <li><a href="/">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div className="footer-col app-col">
@@ -45,8 +45,8 @@ function Footer() {
                                     <img src="https://marketpro-nextjs.vercel.app/assets/images/footer/qr.png" alt="QR" />
                                 </div>
                                 <div className="app-btns">
-                                    <a href="#"><img src="https://marketpro-nextjs.vercel.app/assets/images/footer/app-store.png" alt="App Store" /></a>
-                                    <a href="#"><img src="https://marketpro-nextjs.vercel.app/assets/images/footer/play-store.png" alt="Play Store" /></a>
+                                    <a href="/"><img src="https://marketpro-nextjs.vercel.app/assets/images/footer/app-store.png" alt="App Store" /></a>
+                                    <a href="/"><img src="https://marketpro-nextjs.vercel.app/assets/images/footer/play-store.png" alt="Play Store" /></a>
                                 </div>
                             </div>
                         </div>
@@ -61,10 +61,10 @@ function Footer() {
                             <img src="https://marketpro-nextjs.vercel.app/assets/images/footer/payment.png" alt="Payments" />
                         </div>
                         <div className="social-links">
-                            <a href="#" className="social-circle"><i className="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" className="social-circle"><i className="fa-brands fa-twitter"></i></a>
-                            <a href="#" className="social-circle"><i className="fa-brands fa-instagram"></i></a>
-                            <a href="#" className="social-circle"><i className="fa-brands fa-linkedin-in"></i></a>
+                            <a href="/" className="social-circle"><i className="fa-brands fa-facebook-f"></i></a>
+                            <a href="/" className="social-circle"><i className="fa-brands fa-twitter"></i></a>
+                            <a href="/" className="social-circle"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="/" className="social-circle"><i className="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <button className="back-to-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                             <i className="fa-light fa-arrow-up"></i>

@@ -32,7 +32,7 @@ function Navbar() {
                         </button>
                         <div className="el-nav-links">
                             {links.map((l) => (
-                                <a key={l} href="#" className="el-nav-link">{l}</a>
+                                <a key={l} href="/" className="el-nav-link">{l}</a>
                             ))}
                         </div>
                     </div>
@@ -48,7 +48,7 @@ function Navbar() {
                         <h3>All Categories</h3>
                         <div className="el-mega-menu-grid">
                             {categories.map((cat) => (
-                                <a key={cat} href="#" className="el-mega-menu-item">
+                                <a key={cat} href="/" className="el-mega-menu-item">
                                     {cat}
                                 </a>
                             ))}

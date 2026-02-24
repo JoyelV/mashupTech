@@ -16,13 +16,23 @@ function Newsletter() {
                     <div className="newsletter-content">
                         <h2 className="title">Stay home & get your daily <br />needs from our shop</h2>
                         <p className="subtitle">Start You'r Daily Shopping with <span>MarketPro</span></p>
-                        <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-                            <div className="input-group">
-                                <i className="fa-light fa-paper-plane"></i>
-                                <input type="email" placeholder="Your Email Address" />
-                                <button type="submit">Subscribe</button>
-                            </div>
-                        </form>
+                        {done ? (
+                            <p style={{ color: '#fff', fontWeight: 700 }}>✅ Thank you for subscribing! Check your email.</p>
+                        ) : (
+                            <form className="newsletter-form" onSubmit={handleSubmit}>
+                                <div className="input-group">
+                                    <i className="fa-light fa-paper-plane"></i>
+                                    <input
+                                        type="email"
+                                        placeholder="Your Email Address"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required
+                                    />
+                                    <button type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                        )}
                     </div>
                     <div className="newsletter-img">
                         <img src="https://marketpro-nextjs.vercel.app/assets/images/banner/banner-img4.png" alt="Delivery" />

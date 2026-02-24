@@ -9,7 +9,7 @@ function CategoryBanner() {
                     <div className="mp-section-title">
                         <h2>🗂️ Shop by Category</h2>
                     </div>
-                    <a href="#" className="mp-view-all">All Categories →</a>
+                    <a href="/" className="mp-view-all">All Categories →</a>
                 </div>
                 <div className="mp-cat-grid circular">
                     {categories.map((cat) => (

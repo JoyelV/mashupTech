@@ -33,7 +33,7 @@ function FlashSale() {
                             <span className="mp-time-box">{p(time.s)}</span>
                         </div>
                     </div>
-                    <a href="#" className="mp-view-all">View All →</a>
+                    <a href="/" className="mp-view-all">View All →</a>
                 </div>
 
                 <div className="mp-flash-grid">

@@ -42,7 +42,7 @@ function PromoGrid() {
                             <div className="promo-tag">{p.tag}</div>
                             <h3>{p.title}</h3>
                             <p>{p.desc}</p>
-                            <a href="#" className="promo-link" style={{ color: p.color }}>
+                            <a href="/" className="promo-link" style={{ color: p.color }}>
                                 Shop Now →
                             </a>
                         </div>

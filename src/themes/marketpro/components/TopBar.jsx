@@ -6,7 +6,7 @@ function TopBar() {
             <div className="container">
                 <div className="mp-topbar-left">
                     <div className="tp-item">
-                        <a href="#">Become a Vendor</a>
+                        <a href="/become-vendor">Become a Vendor</a>
                     </div>
                 </div>
                 <div className="mp-topbar-right">

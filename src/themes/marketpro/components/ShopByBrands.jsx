@@ -17,7 +17,7 @@ function ShopByBrands() {
                     <div className="mp-section-title">
                         <h2>Shop by Brands</h2>
                     </div>
-                    <a href="#" className="mp-view-all">View All Deals →</a>
+                    <a href="/brands" className="mp-view-all">View All Deals →</a>
                 </div>
 
                 <div className="brands-grid">

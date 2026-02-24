@@ -9,7 +9,7 @@ function VendorSection() {
                     <div className="mp-section-title">
                         <h2>🏪 Featured Vendors</h2>
                     </div>
-                    <a href="#" className="mp-view-all">All Vendors →</a>
+                    <a href="/vendors" className="mp-view-all">All Vendors →</a>
                 </div>
                 <div className="mp-vendor-grid">
                     {vendors.map((vendor) => (
@@ -19,7 +19,7 @@ function VendorSection() {
                             <div className="mp-vendor-meta">📦 {vendor.products} Products</div>
                             <div className="mp-vendor-meta">📍 {vendor.location}</div>
                             <div className="mp-vendor-rating">⭐ {vendor.rating} / 5.0</div>
-                            <a href="#" className="mp-visit-btn">Visit Store</a>
+                            <a href={`/vendors/${vendor.id}`} className="mp-visit-btn">Visit Store</a>
                         </div>
                     ))}
                 </div>

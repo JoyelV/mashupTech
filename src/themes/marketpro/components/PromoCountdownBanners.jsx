@@ -77,7 +77,7 @@ function PromoCountdownBanners() {
                                         <span className="value">{String(timeLeft.seconds).padStart(2, '0')} S</span>
                                     </div>
                                 </div>
-                                <a href="#" className={`rts-btn ${banner.btnCls}`}>
+                                <a href="/shop" className={`rts-btn ${banner.btnCls}`}>
                                     Shop Now <i className="fa-regular fa-arrow-right"></i>
                                 </a>
                             </div>

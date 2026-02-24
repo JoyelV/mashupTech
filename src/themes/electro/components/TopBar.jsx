@@ -7,9 +7,9 @@ function TopBar() {
                 <span>Welcome to Worldwide Electronics Store</span>
             </div>
             <div className="el-topbar-right">
-                <a href="#" className="el-topbar-link">📍 Store Locator</a>
+                <a href="/" className="el-topbar-link">📍 Store Locator</a>
                 <span className="el-topbar-sep">|</span>
-                <a href="#" className="el-topbar-link">📦 Track Your Order</a>
+                <a href="/" className="el-topbar-link">📦 Track Your Order</a>
                 <span className="el-topbar-sep">|</span>
                 <select className="el-topbar-select">
                     <option>$ Dollar (USD)</option>
@@ -17,7 +17,7 @@ function TopBar() {
                     <option>£ Pound</option>
                 </select>
                 <span className="el-topbar-sep">|</span>
-                <a href="#" className="el-topbar-link">👤 Register or Sign in</a>
+                <a href="/" className="el-topbar-link">👤 Register or Sign in</a>
             </div>
         </div>
     );

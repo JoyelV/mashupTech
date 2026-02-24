@@ -52,7 +52,7 @@ function PopularProducts() {
                   {/* Image + Badge */}
                   <div className="image-and-action-area-wrapper">
                     <a
-                      href="#"
+                      href="/"
                       className="thumbnail-preview"
                     >
                       <div className="badge">
@@ -94,7 +94,7 @@ function PopularProducts() {
 
                   {/* Body */}
                   <div className="body-content">
-                    <a href="#">
+                    <a href="/">
                       <h4 className="title">
                         {product.name}
                       </h4>
