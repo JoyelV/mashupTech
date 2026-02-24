@@ -1,0 +1,119 @@
+/* Wrapper */
+.hero-slider-wrapper {
+  position: relative;
+}
+
+/* Hero Banner */
+.hero-banner {
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Background Images */
+.banner-one {
+  background-image: url("../assets/images/03.webp");
+}
+
+.banner-two {
+  background-image: url("../assets/images/09.webp");
+}
+
+/* Left Dark Gradient Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  max-width: 650px;
+  color: #fff;
+  z-index: 2;
+  display: inline-block;
+}
+
+/* Pre text */
+.hero-content .pre {
+  color: #EABC5E;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color:#fff;
+  margin-top: 20px;
+}
+
+/* Paragraph */
+.hero-content p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin-bottom: 35px;
+  max-width: 500px;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #6dbd45;
+  padding: 16px 32px;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #5aa637;
+  transform: translateY(-3px);
+}
+
+/* Navigation Arrows */
+.hero-button-prev,
+.hero-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.hero-button-prev {
+  left: 40px;
+}
+
+.hero-button-next {
+  right: 40px;
+}
+
+.hero-button-prev:hover,
+.hero-button-next:hover {
+  background: #f4a62a;
+  transform: translateY(-50%) scale(1.1);
+}

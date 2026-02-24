@@ -1,0 +1,189 @@
+/* Section */
+.weekly-sales-section {
+  background: #f3f3f3;
+  padding: 60px 0;
+}
+
+/* Container */
+.sales-container {
+  background: #efefef;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Header */
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.sales-header h2 {
+font-size: 44px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Tabs */
+.sales-tabs button {
+  background: transparent;
+  border: none;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sales-tabs button.active {
+  background: #e2e2e2;
+  font-weight: 600;
+}
+
+/* Products Row */
+.products-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+
+.single-shopping-card-one {
+  padding: 15px;
+  background: #F5F6F7;
+  border-radius: 6px;
+}
+
+.single-shopping-card-one .deals-of-day {
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  background: #fff;
+  border: 1px solid #E2E2E2;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.single-shopping-card-one .deals-of-day:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Badge */
+.single-shopping-card-one.deals-of-day .onsale-offer span {
+  display: block;
+  position: absolute;
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #629D23;
+  border-radius: 6px 0 6px 0;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Image */
+.single-shopping-card-one .image-and-action-area-wrapper {
+  position: relative;
+}
+
+.image-and-action-area-wrapper img {
+  object-fit: contain;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.single-shopping-card-one.deals-of-day .thumbnail-preview {
+  border: none !important;
+}
+
+.single-shopping-card-one .thumbnail-preview {
+  border-radius: 6px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.single-shopping-card-one.deals-of-day .thumbnail-preview img {
+  width: 100%;
+  transform: scale(1.01);
+}
+
+.single-shopping-card-one .body-content {
+  padding-top: 15px;
+}
+
+.single-shopping-card-one.deals-of-day .start-area-rating {
+  margin-bottom: 10px;
+}
+
+.single-shopping-card-one .body-content .availability {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.single-shopping-card-one .body-content .price-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.single-shopping-card-one .cart-counter-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.single-shopping-card-one.deals-of-day .cart-counter-action .rts-btn {
+  background: #629d23;
+  color: #629D23;
+  border: 1px solid #629D23;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.single-shopping-card-one .cart-counter-action .rts-btn {
+  font-size: 14px;
+  padding: 8px 16px !important;
+  background: transparent;
+  color: #629D23;
+  border: 1px solid #629D23;
+}
+
+.single-shopping-card-one.deals-of-day .cart-counter-action .rts-btn .btn-text {
+  color: #fff;
+}
+
+.single-shopping-card-one.deals-of-day .cart-counter-action .rts-btn .arrow-icon i {
+  color: #fff;
+}
+
+/*Tabs */
+.best-selling-grocery {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  justify-content: flex-end;
+}
+
+/* Responsive */

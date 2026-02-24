@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Top Bar */
+.top-bar {
+  background: #5ca617;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlight {
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.expired {
+  margin-left: 8px;
+  opacity: 0.9;
+}
+
+/* MAIN HEADER */
+/* MAIN HEADER */
+.main-header {
+  background: #5ca617;
+  padding: 18px 0;
+}
+
+/* HEADER FLEX */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LOGO */
+.logo-img {
+  height: 48px;
+}
+
+/* SEARCH SECTION */
+.search-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 720px;
+}
+
+/* Unified Search Wrapper */
+.search-section {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 56px;
+}
+
+/* Category Button */
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  border: none;
+  background: #f3f4f6;
+  font-weight: 600;
+  cursor: pointer;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+/* Input */
+.search-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+/* Search Button */
+.search-btn {
+  background: #6dbd45;
+  color: #fff;
+  border: none;
+  padding: 0 25px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* HEADER ACTIONS */
+.account-wishlist-cart-area-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-style-two.bg-primary-header .search-header-area-main .account-wishlist-cart-area-header .btn-border-only {
+  background: #fff;
+  color: #2C3C28;
+}
+
+.btn-border-only {
+  border-radius: 6px;
+  border: 1px solid #E2E2E2;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 26px;
+  gap: 10px;
+  font-weight: 500;
+  color: #2C3C28;
+  transition: 0.3s;
+  box-shadow: 0px 6px 17px rgba(0, 0, 0, 0.06);
+  background: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-border-only {
+    height: 40px;
+    padding: 0;
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .btn-border-only {
+    border: none;
+  }
+}
+
+.btn-border-only:hover {
+  background: #2C3C28;
+  color: #fff;
+}
+
+/*SEARCH */
+.category-search-wrapper {
+  display: flex;
+  align-items: center;
+    gap: 0;
+    position: relative; 
+}
+
+/* Category button (the "Categories" trigger) */
+.category-btn.category-hover-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+border-radius: 5px 0 0 5px;
+  border-right: 1px solid #D9D9D9;  background: #F3F4F6;
+  padding: 15px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #2C3C28;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.category-btn.category-hover-header img.parent {
+  transition: all 0.3s;
+}
+
+/* Hover effect on main button */
+.category-hover-header:hover {
+  background: var(--color-primary, #629d23) !important;  /* replace with your primary color if defined */
+  color: #ffffff !important;
+}
+
+.category-hover-header:hover img.parent {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(0%) hue-rotate(46deg) brightness(111%) contrast(101%);
+}
+
+.category-sub-menu {
+  position: absolute;
+  top: 50px;        
+  left: 0;
+  width: 260px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 10px 0;
+  list-style: none;
+  z-index: 999;
+}
+
+.category-btn.category-hover-header {
+  position: relative;
+  z-index: 1000;   /* ensure above search */
+}
+
+/* Submenu list items */
+.category-sub-menu .submenu li {
+  margin: 0;
+}
+
+/* Submenu links – this is the most important missing part */
+.category-sub-menu .submenu li a {
+  display: block;
+  padding: 10px 44px;           /* more left padding to indent under parent */
+  color: #4a4a4a;               /* darker gray – easier to read than pure black */
+  font-size: 14px;              /* slightly smaller than main items */
+  font-weight: 400;             /* not bold */
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+/* Hover effect for submenu items */
+.category-sub-menu .submenu li a:hover {
+  background: #f8fafc;
+  color: #5ca617;               /* use your brand green */
+  padding-left: 48px;           /* nice little slide-in effect */
+}
+
+/* Optional: active / current state if you add routing later */
+.category-sub-menu .submenu li a.active {
+  color: #5ca617;
+  font-weight: 600;
+  background: #f0f7eb;
+}
+
+/* Fix main category button – make sure it's <button> not <a> */
+.category-sub-menu li button.menu-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2C3C28;
+  transition: all 0.2s;
+}
+
+.category-sub-menu li button.menu-item:hover {
+  background: #5ca617;
+  color: white;
+}
+
+.category-sub-menu li button.menu-item:hover img {
+  filter: brightness(0) invert(1);   /* white icons on green bg */
+}
+
+/* Plus icon styling (you used <span className="plus">+</span>) */
+.category-sub-menu .plus {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #888;
+  transition: transform 0.25s;
+}
+
+.category-sub-menu button.menu-item[aria-expanded="true"] .plus,
+.category-sub-menu button.menu-item.active .plus {
+  transform: rotate(45deg);     /* optional: + → × when open */
+  color: white;
+}
+
+/* When main category is hovered/opened – optional accent */
+.category-sub-menu li:has(button.menu-item:hover),
+.category-sub-menu li:has(button.menu-item[aria-expanded="true"]) {
+  background: #f8fafc;
+}
+
+/* Search form */
+.search-header {
+  position: relative;
+  flex: 1;               /* or flex-basis: 70% if you want to keep proportion */
+}
+
+.search-header input {
+  width: 100%;           /* better than fixed 802px – make it responsive */
+  max-width: 802px;
+  height: 50px;
+  background: #F3F4F6;
+  border: 1px solid transparent;
+  border-radius: 0 5px 5px 0;
+  padding: 0 150px 0 20px;   /* space for button */
+  font-size: 16px;
+}
+
+.search-header input:focus {
+  border: 1px solid var(--color-primary, #629d23);
+  outline: none;
+}
+
+/* Search button */
+.search-header button.rts-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  padding: 0 20px;
+  background: var(--color-primary, #629d23);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.search-header button:hover {
+  background: #557f1d;   /* darker shade – adjust to your theme */
+}
+
+.account-wishlist-cart-area-header .cart span.number {
+  position: absolute;
+  left: 33px;
+  top: 2px;
+  height: 20px;
+  width: 20px;
+  background: #629D23;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.compare-number.number {
+  position: absolute;
+  left: 33px;
+  top: 2px;
+  height: 20px;
+  width: 20px;
+  background: #629D23;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  transition: 0.3s;
+}

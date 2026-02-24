@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# React E-Commerce Theme Showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application showcasing three distinct e-commerce UI themes, each fully modularized into reusable components.
 
-## Available Scripts
+## 🚀 Getting Started
 
-In the project directory, you can run:
+```bash
+cd mashuptech
+npm install
+npm start
+```
 
-### `npm start`
+The app runs at **http://localhost:3000**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎨 Themes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Theme | Type | Route | Color |
+|-------|------|-------|-------|
+| Ekomart | Grocery Store | `/ekomart` | Green `#3bb77e` |
+| MarketPro | Multivendor Marketplace | `/marketpro` | Blue `#1e88e5` |
+| Electro | Electronics Store | `/electro` | Cyan `#00aeef` |
 
-### `npm test`
+Visit `/` to see the **Theme Selector** landing page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
 
-### `npm run build`
+```
+src/
+├── components/
+│   ├── ThemeSelector.jsx       ← Landing page (route: /)
+│   └── ThemeSelector.css
+├── themes/
+│   ├── ekomart/                ← Theme 1: Grocery Store
+│   │   ├── EkokartPage.jsx     ← Main layout
+│   │   ├── components/
+│   │   │   ├── TopBar.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── HeroBanner.jsx
+│   │   │   ├── DealOfDay.jsx       ← Live countdown timer
+│   │   │   ├── FeaturedCategories.jsx
+│   │   │   ├── PromoGrid.jsx
+│   │   │   ├── PopularProducts.jsx
+│   │   │   ├── Newsletter.jsx
+│   │   │   ├── BlogSection.jsx
+│   │   │   └── Footer.jsx
+│   │   ├── data/mockData.js
+│   │   └── styles/ekomart.css
+│   │
+│   ├── marketpro/              ← Theme 2: Multivendor Marketplace
+│   │   ├── MarketProPage.jsx
+│   │   ├── components/
+│   │   │   ├── TopBar.jsx
+│   │   │   ├── Header.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── HeroBanner.jsx
+│   │   │   ├── FlashSale.jsx       ← Live countdown timer
+│   │   │   ├── CategoryBanner.jsx
+│   │   │   ├── ProductGrid.jsx     ← Tab filtering with useState
+│   │   │   ├── VendorSection.jsx
+│   │   │   ├── Newsletter.jsx
+│   │   │   └── Footer.jsx
+│   │   ├── data/mockData.js
+│   │   └── styles/marketpro.css
+│   │
+│   └── electro/                ← Theme 3: Electronics Store
+│       ├── ElectroPage.jsx
+│       ├── components/
+│       │   ├── TopBar.jsx
+│       │   ├── Header.jsx
+│       │   ├── Navbar.jsx
+│       │   ├── HeroBanner.jsx
+│       │   ├── FeaturedProducts.jsx  ← Tab filtering with useState
+│       │   ├── CategoryBoxes.jsx
+│       │   ├── BrandsBar.jsx
+│       │   ├── Newsletter.jsx
+│       │   └── Footer.jsx
+│       ├── data/mockData.js
+│       └── styles/electro.css
+│
+├── App.js                      ← React Router setup
+├── App.css                     ← Global CSS reset
+└── index.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧩 React Concepts Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Concept | Where Used |
+|---------|-----------|
+| `useState` hook | Newsletter forms, cart count, active tabs, countdown timers |
+| `useEffect` hook | Live countdown timers in DealOfDay / FlashSale |
+| Functional components | Every component in the project |
+| Props | Data passed to reusable ProductCard-style sections |
+| `react-router-dom` | Routing between 3 themes + home page |
+| Array `.map()` | Rendering product lists, nav links, categories |
+| Scoped CSS | Per-theme CSS with class prefixes (.eko-, .mp-, .el-) |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏗️ Component Architecture
 
-### `npm run eject`
+Each theme follows the same pattern:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+ThemePage.jsx
+  ├── TopBar
+  ├── Header
+  ├── Navbar
+  ├── HeroBanner
+  ├── [Theme-specific sections]
+  ├── Newsletter
+  └── Footer
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `react` ^18.x
+- `react-dom` ^18.x
+- `react-router-dom` ^6.x
+- `react-scripts` (CRA)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ✅ Evaluation Checklist
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] 3 separate static themes converted to React
+- [x] Each theme is an independent module
+- [x] Modular components (Header, Footer, Navbar, Banner, Products, etc.)
+- [x] Functional components throughout
+- [x] React Hooks: useState, useEffect
+- [x] Clean folder structure
+- [x] Responsive CSS with media queries
+- [x] npm install && npm start works without errors

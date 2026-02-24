@@ -1,0 +1,213 @@
+.rts-footer-area-two {
+  background: #1A1A1A;
+  padding: 100px 0 80px;
+}
+
+.footer-two-main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-single-wized-two.start {
+  flex-basis: 24%;
+}
+
+.footer-single-wized-two .disc {
+  color: #a1a1a1;
+  margin: 25px 0;
+  font-size: 15px;
+}
+
+/* Newsletter */
+.footer-two-main-wrapper form {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.footer-two-main-wrapper input {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  border: none;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.footer-two-main-wrapper button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  border: none;
+  background: #629D23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer-two-main-wrapper button i {
+  color: #fff;
+  font-size: 14px;
+}
+
+.rts-btn.btn-primary {
+  background: #629D23;
+  border-radius: 6px;
+  display: flex;
+  max-width: max-content;
+}
+
+/* Titles */
+.single-footer-wized .footer-title {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.social-style-dash ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 59px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.single-footer-wized ul {
+  list-style: none;
+  padding: 0;
+}
+
+.single-footer-wized ul li {
+  margin-bottom: 12px;
+}
+
+.single-footer-wized ul li a {
+  color: #a1a1a1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.single-footer-wized ul li a:hover {
+  color: #6dbd45;
+}
+
+/* Contact Wrapper */
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each Row */
+.single-contact-information-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Icon */
+.icon-area {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: #6dbd45;
+  font-size: 22px;
+}
+
+/* Text Container */
+.information-area .disc {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Phone Number */
+.information-area a {
+  color: #6dbd45;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Live Chat second line */
+.information-area span {
+  color: #a1a1a1;
+  font-size: 15px;
+}
+/* Bottom */
+.rts-copyright-area-two {
+  background: #1A1A1A;
+  border-top: 1px solid #353535;
+}
+
+.rts-copyright-area-two .copyright-arae-two-wrapper {
+  display: flex;
+  padding: 28px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 575px) {
+  .rts-copyright-area-two .copyright-arae-two-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+.rts-copyright-area-two .copyright-arae-two-wrapper p {
+  color: #fff;
+  margin: 0;
+}
+
+.rts-copyright-area-two .copyright-arae-two-wrapper span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.rts-copyright-area-two .copyright-arae-two-wrapper .payment-processw-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 479px) {
+  .rts-copyright-area-two .copyright-arae-two-wrapper .payment-processw-area span {
+    display: none;
+  }
+}
+
+.payment-processw-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.payment-processw-area span {
+  color: #fff;
+}
+
+.footer-two-main-wrapper form button i {
+  line-height: 0;
+}
+
+.footer-two-main-wrapper .single-footer-wized .footer-title {
+  color: #fff;
+}
+
+.footer-two-main-wrapper .single-footer-wized ul li a {
+  color: rgb(161, 161, 161);
+}

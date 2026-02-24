@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ThemeSelector from './components/ThemeSelector';
+import EkokartPage from './themes/ekomart/EkokartPage';
+import MarketProPage from './themes/marketpro/MarketProPage';
+import ElectroPage from './themes/electro/ElectroPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ThemeSelector />} />
+        <Route path="/ekomart" element={<EkokartPage />} />
+        <Route path="/marketpro" element={<MarketProPage />} />
+        <Route path="/electro" element={<ElectroPage />} />
+      </Routes>
+    </Router>
   );
 }
 

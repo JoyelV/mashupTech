@@ -1,0 +1,53 @@
+.easyway-buying-area-wrapper {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .easyway-buying-area-wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .easyway-buying-area-wrapper {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
+
+.single-easy-way-buying-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.single-easy-way-buying-area .icon {
+  height: 45px;
+  width: 45px;
+  border: 1px solid #629D23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.information .title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.information p {
+  color: #74787C;
+  margin: 0;
+  font-size: 14px;
+}

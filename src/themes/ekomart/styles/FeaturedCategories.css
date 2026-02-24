@@ -1,0 +1,102 @@
+/* ===== SECTION BACKGROUND ===== */
+.rts-category-area {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+
+/* ===== INNER WRAPPER ===== */
+.cover-card-main-over {
+  background: #eeeeee;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* ===== TITLE ===== */
+.title-area-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.title-left {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3a2f;
+}
+
+/* ===== NAV BUTTONS ===== */
+.next-prev-swiper-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-prev,
+.custom-next {
+  height: 33px;
+  width: 33px;
+  border-radius: 6px;
+  border: 1px solid #629D23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  background: #6dbd45;
+  color: #2C3C28;
+  border-color: #6dbd45;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== CATEGORY CARD ===== */
+.single-category-one {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 25px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.single-category-one img {
+max-width: 70px;
+    max-height: 94px;
+    margin: auto;
+    margin-bottom: 18px;
+    min-height: 60px;
+    text-align: center;
+    display: flex;
+}
+
+.single-category-one p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3a2f;
+  margin: 0;
+}
+
+/* Hover effect like image */
+.single-category-one:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+/* OVERRIDE SWIPER DEFAULT NAV POSITION */
+.rts-category-area .swiper-button-prev,
+.rts-category-area .swiper-button-next {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  margin: 0 !important;
+}
