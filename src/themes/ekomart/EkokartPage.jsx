@@ -14,6 +14,12 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
 function EkomartPage() {
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <div className="eko-page">
             {/* Dev nav bar */}
@@ -24,14 +30,14 @@ function EkomartPage() {
                 <Link to="/" style={{ color: '#629D23', fontWeight: 700 }}>← Back to Theme Selector</Link>
                 {' '} | You are viewing: <strong>Ekomart – Grocery Store Theme</strong>
             </div>
-            <Header />
-            <Navbar/>
+            <Header onToggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+            <Navbar isOpen={isMenuOpen} toggleMenu={toggleMenu} />
             <InfoStrip />
             <HeroBanner />
             <FeaturedCategories />
             <FeatureCards />
             <PopularProducts />
-            <WeeklySalesOne/>
+            <WeeklySalesOne />
             <WeeklySales />
             <BlogSection />
             <Footer />

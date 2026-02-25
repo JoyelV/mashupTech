@@ -2860,7 +2860,7 @@
 
 /* --- Navbar: .navbar-area-one --- */
 .navbar-area-one {
-    background: var(--eko-primary);
+    background: #5ca617;
     position: relative;
     z-index: 90;
 }
@@ -3198,25 +3198,31 @@
 }
 
 /* --- DEEP UX REFINEMENTS --- */
+/* --- DEEP UX REFINEMENTS --- */
 .eko-page h1 {
-    font-size: clamp(32px, 8vw, 60px) !important;
+    font-size: clamp(28px, 7vw, 60px) !important;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
 .eko-page h2 {
-    font-size: clamp(24px, 6vw, 30px) !important;
+    font-size: clamp(24px, 5vw, 40px) !important;
+    font-weight: 700;
 }
 
 .eko-page h3 {
-    font-size: clamp(20px, 5vw, 26px) !important;
+    font-size: clamp(20px, 4vw, 30px) !important;
 }
 
 .eko-hero-content {
-    padding: clamp(20px, 5vw, 54px) !important;
+    padding: clamp(30px, 6vw, 60px) !important;
 }
 
 .eko-deal-section,
-.eko-best-sells-section {
-    padding: clamp(20px, 5vh, 50px) 0 !important;
+.eko-best-sells-section,
+.eko-popular-section,
+.eko-weekly-section {
+    padding: clamp(40px, 8vh, 80px) 0 !important;
 }
 
 /* --- RESPONSIVE --- */
@@ -3229,14 +3235,13 @@
     .main-nav ul li a {
         padding: 13px 12px;
     }
+
+    .eko-products-grid-5 {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 992px) {
-    .header-one-inner {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
     .search-area-header {
         order: 3;
         min-width: 100%;
@@ -3245,136 +3250,101 @@
 
     .eko-hero-inner {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
     }
 
     .eko-hero-image {
-        height: 350px;
+        height: 400px;
+    }
+
+    .eko-products-grid-5,
+    .eko-products-grid-4 {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .easyway-buying-area-wrapper {
         justify-content: center;
-        gap: 25px;
-    }
-
-    .single-easy-way-buying-area {
-        flex: 1 1 45%;
+        gap: 30px;
     }
 }
 
 @media (max-width: 900px) {
 
     /* Target Breakpoint for Stacking */
-    .header-one-inner {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    .header-right-action-area {
-        width: 100%;
-        justify-content: center;
-    }
-
     .eko-hero-content {
         text-align: center;
-        padding: 40px 20px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .eko-hero-content .eko-btn {
-        margin: 0 auto;
-    }
-
-    .eko-products-grid-5,
-    .eko-products-grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-
-    .footer-top-one-inner {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .head-top-inner {
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navbar-area-one-inner {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 0;
-    }
-
-    .main-nav ul {
-        width: 100%;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding-bottom: 10px;
-        gap: 20px;
-    }
-
-    .single-easy-way-buying-area {
-        flex: 1 1 100%;
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header-action-btn {
-        padding: 10px;
-        min-width: 44px;
-        justify-content: center;
-    }
-
-    .header-action-btn span:not(.btn-badge) {
-        display: none;
-    }
-
-    .search-btn span {
-        display: none;
-    }
-
-    .eko-hero-content h1 {
-        font-size: 2.2rem !important;
+        margin: 20px auto 0;
     }
 
     .eko-products-grid-5,
     .eko-products-grid-4,
+    .eko-products-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-top-one-inner {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-single-wized {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .eko-hero-image {
+        height: 300px;
+    }
+
+    .single-easy-way-buying-area {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .eko-hero-content h1 {
+        font-size: clamp(24px, 8vw, 36px) !important;
+    }
+
+    .eko-products-grid-5,
+    .eko-products-grid-4,
+    .eko-products-grid-3,
     .eko-products-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
     }
 
     .footer-bottom-one-inner {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         text-align: center;
     }
 
     .payment-accepts {
         justify-content: center;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .eko-hero-content h1 {
-        font-size: 1.8rem !important;
-    }
-
     .eko-hero-image {
         height: 250px;
     }
 
-    .category-drop-in-header {
-        padding: 10px 15px;
+    .eko-hero-content {
+        padding: 30px 20px !important;
     }
 }
 
@@ -3383,38 +3353,21 @@
         font-size: 1.5rem !important;
     }
 
-    .header-one-inner {
-        padding: 15px 10px !important;
-        gap: 12px !important;
-    }
-
-    .header-right-action-area {
-        gap: 10px !important;
-    }
-
-    .header-action-btn {
-        padding: 6px !important;
-        min-width: 36px !important;
-    }
-
-    .search-area-header {
-        margin-top: 10px !important;
-    }
-
-    .eko-hero-inner {
-        gap: 20px !important;
+    .eko-page h2 {
+        font-size: 1.4rem !important;
     }
 
     .eko-hero-image {
         height: 200px !important;
     }
 
-    .footer-top-one-inner {
-        gap: 20px !important;
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
-    .container {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+    .eko-btn {
+        width: 100%;
+        text-align: center;
     }
 }

@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = () => {
+const Navbar = ({ isOpen, toggleMenu }) => {
   return (
     <>
       {/* Navbar */}
       <nav className="navbar">
         <div className="container nav-flex">
-          <div className="nav-links">
+          {/* Hamburger Toggle - Hidden as it's now in Header */}
+          <button className="hamburger-toggle" style={{ display: 'none' }} aria-label="Toggle Menu">
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+
+          <div className={`nav-links ${isOpen ? "open" : ""}`}>
             <a href="/">Home</a>
             <a href="/">About</a>
             <a href="/">Shop</a>
@@ -26,6 +31,9 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      {/* Backdrop */}
+      {isOpen && <div className="nav-backdrop" onClick={toggleMenu}></div>}
     </>
   );
 };

@@ -114,24 +114,59 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 992px) {
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
   .single-feature-card.style-three {
-    height: 300px;
-    padding: 30px;
+    height: 250px;
+    padding: 15px;
+    background-size: 50%;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .discount-badge {
+    padding: 4px 10px;
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .shop-now-btn {
+    font-size: 14px;
+  }
+
+  .plus-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 576px) {
-  .single-feature-card.style-three {
-    height: 260px;
-    background-size: 60%;
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .content-area {
-    max-width: 70%;
+  .single-feature-card.style-three {
+    height: 250px;
+    background-size: contain;
+    background-position: right bottom;
+  }
+}
+
+@media (max-width: 425px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .single-feature-card.style-three {
+    height: 300px;
   }
 }

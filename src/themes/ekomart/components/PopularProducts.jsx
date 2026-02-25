@@ -38,14 +38,14 @@ function PopularProducts() {
         </div>
 
         {/* Product Grid */}
-        <div className="row">
+        <div className="product-grid">
           {popularProducts.map((product) => {
             const qty = getQty(product.id);
 
             return (
               <div
                 key={product.id}
-                className="col-lg-3 col-md-6 col-sm-6 col-12"
+                className="product-card-wrap"
               >
                 <div className="single-shopping-card-one">
 

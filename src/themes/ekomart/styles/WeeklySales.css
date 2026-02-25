@@ -20,7 +20,7 @@
 }
 
 .sales-header h2 {
-font-size: 44px;
+  font-size: 44px;
   font-weight: 700;
   color: #1a1a1a;
 }
@@ -45,7 +45,7 @@ font-size: 44px;
 /* Products Row */
 .products-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
@@ -97,9 +97,9 @@ font-size: 44px;
 
 .image-and-action-area-wrapper img {
   object-fit: contain;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 .single-shopping-card-one.deals-of-day .thumbnail-preview {
@@ -186,3 +186,79 @@ font-size: 44px;
   justify-content: flex-end;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .sales-header h2 {
+    font-size: 32px;
+  }
+
+  .products-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .products-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .sales-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .sales-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sales-tabs button {
+    margin: 0;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-container {
+    padding: 15px;
+  }
+
+  .sales-header h2 {
+    font-size: 24px;
+  }
+
+  .image-and-action-area-wrapper img {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .best-selling-grocery {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 15px !important;
+  }
+
+  .sales-header h2 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-selling-grocery {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px !important;
+  }
+}

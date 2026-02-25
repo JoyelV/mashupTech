@@ -7,13 +7,13 @@ import icon03 from "../assets/images/icons/03.svg";
 import icon04 from "../assets/images/icons/04.svg";
 import { useEffect, useRef, useState } from "react";
 
-const Header = () => {
+const Header = ({ onToggleMenu, isMenuOpen }) => {
   const [showCategories, setShowCategories] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
   const [search, setSearch] = useState("");
+  const [isSticky, setIsSticky] = useState(false);
 
   const dropdownRef = useRef(null);
-
   const categories = [
     {
       name: "Breakfast & Dairy",
@@ -48,8 +48,18 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -69,14 +79,14 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="main-header">
+      <header className={`main-header ${isSticky ? "sticky" : ""}`}>
         <div className="container header-flex">
           {/* Logo */}
           <div className="logo">
             <img src={logo} alt="Ekomart Logo" className="logo-img" />
           </div>
 
-          {/* Category + Search */}
+          {/* Category + Search (Hidden on Mobile Search Icon Mode) */}
           <div className="category-search-wrapper" ref={dropdownRef}>
             {/* Category Button */}
             <div
@@ -147,29 +157,38 @@ const Header = () => {
             </form>
           </div>
 
-          {/* Right Actions */}
+          {/* Right Actions - Boxed Buttons for Tablet/Mobile */}
           <div className="account-wishlist-cart-area-header">
-            <a className="btn-border-only account" href="/account">
+            <a className="btn-border-only account boxed-action hide-on-mobile" href="/account">
               <i className="fa-solid fa-user"></i>
-              <span>Account</span>
+              <span className="text">Account</span>
             </a>
-            <a
-              className="btn-border-only account compare-number"
-              href="/compare"
-            >
-              <i className="fa-solid fa-code-compare"></i>
+
+            <div className="btn-border-only compare boxed-action hide-on-mobile">
+              <i className="fa-solid fa-arrows-rotate"></i>
               <span className="number">0</span>
-            </a>
-            <div className="btn-border-only cart category-hover-header">
+            </div>
+
+            <div className="btn-border-only wishlist boxed-action hide-on-mobile">
               <i className="fa-solid fa-heart"></i>
               <span className="text">Wishlist</span>
               <span className="number">0</span>
             </div>
-            <div className="btn-border-only cart category-hover-header">
+
+            <div className="btn-border-only cart boxed-action">
               <i className="fa-sharp fa-solid fa-cart-shopping"></i>
-              <span className="text">Cart</span>
               <span className="number">0</span>
             </div>
+
+            {/* Mobile Search Toggle */}
+            <div className="btn-border-only search-toggle boxed-action">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            {/* Hamburger Menu Toggle */}
+            <button className="btn-border-only hamburger-toggle boxed-action" onClick={onToggleMenu}>
+              <i className={`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+            </button>
           </div>
         </div>
       </header>
