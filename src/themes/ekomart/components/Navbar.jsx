@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ isOpen, toggleMenu }) => {
   return (
