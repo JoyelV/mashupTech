@@ -3196,3 +3196,225 @@
     color: #ffffff;
     transform: translateY(-5px);
 }
+
+/* --- DEEP UX REFINEMENTS --- */
+.eko-page h1 {
+    font-size: clamp(32px, 8vw, 60px) !important;
+}
+
+.eko-page h2 {
+    font-size: clamp(24px, 6vw, 30px) !important;
+}
+
+.eko-page h3 {
+    font-size: clamp(20px, 5vw, 26px) !important;
+}
+
+.eko-hero-content {
+    padding: clamp(20px, 5vw, 54px) !important;
+}
+
+.eko-deal-section,
+.eko-best-sells-section {
+    padding: clamp(20px, 5vh, 50px) 0 !important;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 1200px) {
+    .header-one-inner {
+        gap: 20px;
+    }
+
+    .main-nav ul li a {
+        padding: 13px 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-one-inner {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search-area-header {
+        order: 3;
+        min-width: 100%;
+        margin-top: 15px;
+    }
+
+    .eko-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .eko-hero-image {
+        height: 350px;
+    }
+
+    .easyway-buying-area-wrapper {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .single-easy-way-buying-area {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Target Breakpoint for Stacking */
+    .header-one-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .header-right-action-area {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .eko-hero-content {
+        text-align: center;
+        padding: 40px 20px !important;
+    }
+
+    .eko-hero-content .eko-btn {
+        margin: 0 auto;
+    }
+
+    .eko-products-grid-5,
+    .eko-products-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .footer-top-one-inner {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .head-top-inner {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-area-one-inner {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .main-nav ul {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        gap: 20px;
+    }
+
+    .single-easy-way-buying-area {
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-action-btn {
+        padding: 10px;
+        min-width: 44px;
+        justify-content: center;
+    }
+
+    .header-action-btn span:not(.btn-badge) {
+        display: none;
+    }
+
+    .search-btn span {
+        display: none;
+    }
+
+    .eko-hero-content h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .eko-products-grid-5,
+    .eko-products-grid-4,
+    .eko-products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-bottom-one-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .payment-accepts {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .eko-hero-content h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .eko-hero-image {
+        height: 250px;
+    }
+
+    .category-drop-in-header {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .eko-hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .header-one-inner {
+        padding: 15px 10px !important;
+        gap: 12px !important;
+    }
+
+    .header-right-action-area {
+        gap: 10px !important;
+    }
+
+    .header-action-btn {
+        padding: 6px !important;
+        min-width: 36px !important;
+    }
+
+    .search-area-header {
+        margin-top: 10px !important;
+    }
+
+    .eko-hero-inner {
+        gap: 20px !important;
+    }
+
+    .eko-hero-image {
+        height: 200px !important;
+    }
+
+    .footer-top-one-inner {
+        gap: 20px !important;
+    }
+
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}

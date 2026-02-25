@@ -15,7 +15,7 @@
 .mp-flash-title {
     font-size: 28px;
     font-weight: 800;
-    color: #0f172a; 
+    color: #0f172a;
     margin: 0;
 }
 
@@ -67,8 +67,8 @@
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding-bottom: 20px; 
-    scrollbar-width: none; 
+    padding-bottom: 20px;
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
@@ -79,7 +79,7 @@
 /* Individual Product Card */
 .mp-flash-card {
     flex: 0 0 auto;
-    width: 230px; 
+    width: 230px;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     padding: 24px 20px;
@@ -94,7 +94,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    background-color: #e0f2fe; 
+    background-color: #e0f2fe;
     color: #0284c7;
     border: none;
     border-radius: 50px;
@@ -139,7 +139,7 @@
 .mp-price-current {
     font-size: 18px;
     font-weight: 800;
-    color: #111827; 
+    color: #111827;
 }
 
 .mp-price-qty {
@@ -186,7 +186,7 @@
 
 /* Progress Bar at Bottom */
 .mp-card-progress-wrap {
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 .mp-progress-track {
@@ -208,4 +208,28 @@
     font-size: 12px;
     color: #64748b;
     font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mp-flash-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .mp-flash-track {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mp-flash-title {
+        font-size: 22px;
+    }
+
+    .mp-flash-card {
+        width: 200px;
+        padding: 15px;
+    }
 }

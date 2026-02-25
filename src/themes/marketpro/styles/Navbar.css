@@ -15,12 +15,12 @@
 .mp-navbar-left {
     display: flex;
     align-items: center;
-    gap: 40px; 
+    gap: 40px;
 }
 
 /* Browse Categories Button */
 .mp-category-btn {
-    background-color: #22c55e; 
+    background-color: #22c55e;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -39,7 +39,8 @@
     background-color: #16a34a;
 }
 
-.mp-icon, .mp-icon-caret {
+.mp-icon,
+.mp-icon-caret {
     font-size: 18px;
     display: flex;
 }
@@ -62,7 +63,7 @@
 
 .mp-nav-link {
     text-decoration: none;
-    color: #1f2937; 
+    color: #1f2937;
     font-size: 15px;
     font-weight: 500;
     display: flex;
@@ -72,7 +73,7 @@
 }
 
 .mp-nav-link:hover {
-    color: #1b7b9b; 
+    color: #1b7b9b;
 }
 
 .mp-dropdown-icon {
@@ -95,7 +96,6 @@
     white-space: nowrap;
 }
 
-/* Little triangle pointer for the badge */
 .mp-nav-badge::after {
     content: '';
     position: absolute;
@@ -105,18 +105,19 @@
     border-style: solid;
 }
 
-/* Specific Badge Colors */
 .mp-badge-peach {
-    background-color: #fcd34d; 
+    background-color: #fcd34d;
     color: #ffffff;
 }
+
 .mp-badge-peach::after {
     border-color: #fcd34d transparent transparent transparent;
 }
 
 .mp-badge-purple {
-    background-color: #a78bfa; 
+    background-color: #a78bfa;
 }
+
 .mp-badge-purple::after {
     border-color: #a78bfa transparent transparent transparent;
 }
@@ -135,7 +136,7 @@
 
 .mp-support-icon {
     font-size: 28px;
-    color: #1b7b9b; 
+    color: #1b7b9b;
     display: flex;
 }
 
@@ -153,6 +154,100 @@
 .mp-support-number {
     font-size: 16px;
     font-weight: 700;
-    color: #1b7b9b; 
+    color: #1b7b9b;
     text-decoration: none;
+}
+
+/* Hamburger Toggle & Backdrop */
+.mp-hamburger-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #1f2937;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.mp-nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .mp-hamburger-toggle {
+        display: block;
+    }
+
+    .mp-category-btn .mp-btn-text,
+    .mp-category-btn .mp-icon-caret {
+        display: none;
+    }
+
+    .mp-category-btn {
+        padding: 0 16px;
+    }
+
+    .mp-nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 30px;
+        gap: 20px;
+        transition: left 0.3s ease-in-out;
+        z-index: 1001;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mp-nav-menu.open {
+        left: 0;
+    }
+
+    .mp-nav-item {
+        width: 100%;
+    }
+
+    .mp-nav-link {
+        font-size: 18px;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .mp-nav-badge {
+        position: static;
+        transform: none;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+
+    .mp-nav-badge::after {
+        display: none;
+    }
+
+    .mp-navbar-right {
+        display: none;
+    }
+
+    .mp-navbar-left {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mp-navbar-inner {
+        height: 60px;
+    }
 }

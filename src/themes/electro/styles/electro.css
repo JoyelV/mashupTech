@@ -3060,3 +3060,164 @@
         right: 10px;
     }
 }
+
+/* --- DEEP UX REFINEMENTS --- */
+.el-page h1 {
+    font-size: clamp(28px, 6vw, 42px) !important;
+}
+
+.el-page h2 {
+    font-size: clamp(22px, 5vw, 28px) !important;
+}
+
+.el-page h3 {
+    font-size: clamp(18px, 4vw, 22px) !important;
+}
+
+.el-hero-section,
+.el-deals-section {
+    padding: clamp(20px, 4vh, 40px) 0 !important;
+}
+
+.el-products-grid {
+    gap: clamp(10px, 2vw, 20px) !important;
+}
+
+/* --- EXTRA RESPONSIVE --- */
+
+@media (max-width: 1200px) {
+    .el-header .container {
+        gap: 20px;
+    }
+
+    .el-nav-link {
+        padding: 16px 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .el-header .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .el-search {
+        order: 3;
+        min-width: 100%;
+        margin-top: 15px;
+    }
+
+    .el-hero-banner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .el-banner-image {
+        min-height: 250px;
+    }
+
+    .el-deals-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .el-hero-products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Target Breakpoint for Stacking */
+    .el-deals-strip {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .el-hero-products {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .el-header-actions {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 15px;
+    }
+
+    .el-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .el-topbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 16px;
+    }
+
+    .el-navbar .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .el-nav-links {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        gap: 20px;
+    }
+
+    .el-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .el-header .container {
+        padding: 15px 16px !important;
+        gap: 12px !important;
+    }
+
+    .el-action {
+        flex-direction: column;
+        gap: 6px;
+        min-width: 48px;
+        min-height: 48px;
+        justify-content: center;
+    }
+
+    .el-action .lbl {
+        display: none;
+    }
+
+    .el-footer-bottom .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .el-hero-content h1 {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .el-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .el-header-actions {
+        gap: 20px;
+    }
+
+    .el-banner-image {
+        min-height: 180px;
+    }
+}

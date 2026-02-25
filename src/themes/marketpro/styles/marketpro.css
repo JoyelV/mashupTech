@@ -41,9 +41,9 @@
     --mp-add-btn-text: #19BD81;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -1863,7 +1863,32 @@
     border: none !important;
 }
 
+/* --- DEEP UX REFINEMENTS --- */
+.text-32 {
+    font-size: clamp(24px, 5vw, 32px) !important;
+}
+
+.text-2xl {
+    font-size: clamp(20px, 4vw, 24px) !important;
+}
+
+.text-xl {
+    font-size: clamp(18px, 3vw, 20px) !important;
+}
+
+.py-50 {
+    padding-top: clamp(20px, 5vh, 50px);
+    padding-bottom: clamp(20px, 5vh, 50px);
+}
+
 /* --- RESPONSIVE --- */
+
+@media (max-width: 1200px) {
+    .mp-hero .container {
+        gap: 30px;
+    }
+}
+
 @media (max-width: 992px) {
     .mp-hero .container {
         grid-template-columns: 1fr;
@@ -1871,37 +1896,236 @@
 
     .mp-hero-sidebar {
         flex-direction: row;
+        gap: 20px;
+    }
+
+    .mp-hero-mini-banner {
+        flex: 1;
     }
 
     .mp-footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 
     .mp-newsletter .container {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .mp-newsletter-right {
+        justify-content: center;
     }
 }
 
-@media (max-width: 768px) {
-    .mp-nav-links {
-        display: none;
+@media (max-width: 900px) {
+
+    /* Target Breakpoint for Stacking */
+    .mp-hero-sidebar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mp-promo-banners .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .mp-small-banners .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .mp-footer-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .mp-vendor-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mp-topbar .container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .mp-header-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+        padding: 20px 16px;
+    }
+
+    .mp-logo {
+        order: 1;
+        min-width: unset;
+    }
+
+    .mp-header-actions {
+        order: 2;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mp-search-wrapper {
+        order: 3;
+        width: 100%;
+        height: auto;
+    }
+
+    .mp-nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .mp-nav-main-links {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        gap: 25px;
+    }
+
+    .mp-nav-support {
+        display: none;
+    }
+
+    .mp-product-grid-wrap {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .mp-section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mp-topbar-left,
+    .mp-topbar-right {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .mp-flash-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mp-brand-slider {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .mp-footer-mid .container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .mp-bottom-footer .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .mp-search-wrapper {
+        height: auto;
+        flex-direction: column;
+        border: none;
+        gap: 8px;
+    }
+
+    .mp-category-dropdown {
+        width: 100%;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        height: 44px;
+        justify-content: center;
+    }
+
+    .mp-search-input {
+        width: 100%;
+        border: 1px solid #eee;
+        height: 44px;
+        border-radius: 6px;
+        padding-left: 15px;
+    }
+
+    .mp-search-btn {
+        width: 100%;
+        border-radius: 6px;
+        height: 44px;
     }
 }
 
 @media (max-width: 480px) {
-    .mp-flash-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .mp-product-grid-wrap {
+        grid-template-columns: 1fr;
     }
 
-    .mp-hero-sidebar {
-        flex-direction: column;
+    .mp-header-actions {
+        gap: 15px;
+    }
+
+    .mp-action-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mp-header .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .mp-logo {
+        min-width: unset !important;
+    }
+
+    .mp-header-actions {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    .mp-topbar .container {
+        font-size: 0.7rem !important;
+        gap: 10px !important;
+    }
+
+    .mp-newsletter-right {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .mp-newsletter-right input {
+        width: 100% !important;
+    }
+
+    .mp-newsletter-right button {
+        width: 100% !important;
+    }
+
+    .mp-flash-grid,
+    .mp-vendor-grid,
+    .mp-footer-grid {
+        gap: 20px !important;
+    }
+
+    .mp-bottom-footer .container {
+        font-size: 0.75rem !important;
     }
 }

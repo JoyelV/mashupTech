@@ -16,17 +16,17 @@
     min-height: 280px;
     display: flex;
     align-items: center;
-    overflow: hidden; 
+    overflow: hidden;
     padding: 40px;
 }
 
 /* Background Variations */
 .mp-card-pink {
-    background-color: #f7e9e6; 
+    background-color: #f7e9e6;
 }
 
 .mp-card-yellow {
-    background-color: #fffdf5; 
+    background-color: #fffdf5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,14 +44,14 @@
 .mp-img-left {
     left: -20px;
     bottom: -20px;
-    height: 120%; 
+    height: 120%;
 }
 
 .mp-img-right {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 130%; 
+    height: 130%;
 }
 
 /* -------------------------------------------
@@ -59,7 +59,7 @@
 ---------------------------------------------- */
 .mp-discount-content {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -84,7 +84,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .mp-brand-logo img {
@@ -94,9 +94,9 @@
 
 /* Typography */
 .mp-discount-title {
-    font-size: 32px;
+    font-size: clamp(22px, 4vw, 32px);
     font-weight: 800;
-    color: #1e293b; 
+    color: #1e293b;
     margin: 0 0 12px 0;
     line-height: 1.2;
 }
@@ -145,22 +145,34 @@
 .mp-btn-white {
     background-color: #ffffff;
     color: #1e293b;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .mp-btn-white:hover {
     background-color: #f8fafc;
-    box-shadow: 0 6px 10px -1px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 992px) {
+/* Responsive Design */
+@media (max-width: 900px) {
+    .mp-discount-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
     .mp-discount-card {
         padding: 30px;
+        min-height: 250px;
     }
-    
-    .mp-content-right, .mp-content-left {
-        max-width: 65%; 
+
+    .mp-img-left {
+        height: 110%;
+        left: -10px;
+    }
+
+    .mp-img-right {
+        height: 120%;
     }
 }
 
@@ -169,21 +181,41 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 180px; 
+        padding: 170px 20px 30px 20px;
     }
 
-    .mp-content-right, .mp-content-left {
+    .mp-content-right,
+    .mp-content-left {
         max-width: 100%;
         margin: 0;
         align-items: center;
     }
 
-    .mp-img-left, .mp-img-right {
-        top: 0;
+    .mp-img-left,
+    .mp-img-right {
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
         bottom: auto;
         right: auto;
-        height: 160px;
+        height: 140px;
+        width: auto;
+    }
+
+    .mp-brand-logo {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .mp-discount-card {
+        padding-top: 150px;
+    }
+
+    .mp-img-left,
+    .mp-img-right {
+        height: 120px;
     }
 }

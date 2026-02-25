@@ -1,8 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 .selector-page {
@@ -157,8 +157,13 @@
     font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .themes-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .selector-header h1 {
+        font-size: 2.2rem;
     }
 }

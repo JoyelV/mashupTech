@@ -69,15 +69,15 @@
 .mp-hd-content-wrapper {
     display: flex;
     gap: 24px;
-    align-items: stretch; 
+    align-items: stretch;
 }
 
 /* -------------------------------------------
    Left Promotional Timer Card
 ---------------------------------------------- */
 .mp-hd-promo-card {
-    flex: 0 0 340px; 
-    background-color: #137c8e; 
+    flex: 0 0 340px;
+    background-color: #137c8e;
     border-radius: 20px;
     padding: 40px 30px;
     position: relative;
@@ -88,8 +88,8 @@
 }
 
 .mp-hd-badge {
-    background-color: #fcd34d; 
-    color: #92400e; 
+    background-color: #fcd34d;
+    color: #92400e;
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 13px;
@@ -131,7 +131,7 @@
     font-weight: 700;
     min-width: 48px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .mp-hd-colon {
@@ -142,7 +142,7 @@
 /* Explore Button */
 .mp-hd-explore-btn {
     background-color: #ffffff;
-    color: #137c8e; 
+    color: #137c8e;
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 50px;
@@ -173,13 +173,13 @@
    Right Product Slider Track
 ---------------------------------------------- */
 .mp-hd-slider-track {
-    flex: 1; 
+    flex: 1;
     display: flex;
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 10px;
-    scrollbar-width: none; 
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
@@ -190,7 +190,7 @@
 /* Individual Product Card */
 .mp-hd-product-card {
     flex: 0 0 auto;
-    width: 240px; 
+    width: 240px;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     padding: 24px 20px;
@@ -211,8 +211,8 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    background-color: #e0f2fe; 
-    color: #0284c7; 
+    background-color: #e0f2fe;
+    color: #0284c7;
     border: none;
     border-radius: 50px;
     padding: 6px 14px;
@@ -256,7 +256,7 @@
 .mp-price-current {
     font-size: 18px;
     font-weight: 800;
-    color: #111827; 
+    color: #111827;
 }
 
 .mp-price-qty {
@@ -280,9 +280,17 @@
     color: #4b5563;
 }
 
-.mp-rating-score { font-weight: 700; }
-.mp-star-icon { color: #f59e0b; }
-.mp-rating-reviews { color: #9ca3af; }
+.mp-rating-score {
+    font-weight: 700;
+}
+
+.mp-star-icon {
+    color: #f59e0b;
+}
+
+.mp-rating-reviews {
+    color: #9ca3af;
+}
 
 /* Title */
 .mp-card-title {
@@ -293,6 +301,7 @@
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     height: 42px;
@@ -314,7 +323,7 @@
 
 .mp-progress-fill {
     height: 100%;
-    background-color: #137c8e; 
+    background-color: #137c8e;
     border-radius: 4px;
 }
 
@@ -325,19 +334,52 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 992px) {
-    .mp-hd-content-wrapper {
-        flex-direction: column; 
+@media (max-width: 900px) {
+    .mp-hd-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
+
+    .mp-hd-content-wrapper {
+        flex-direction: column;
+    }
+
     .mp-hd-promo-card {
         flex: auto;
         width: 100%;
         align-items: center;
         text-align: center;
-        padding-bottom: 200px; 
+        padding-bottom: 220px;
     }
+
     .mp-hd-promo-img {
         right: 50%;
         transform: translateX(50%);
+        width: 240px;
+    }
+
+    .mp-hd-slider-track {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .mp-hd-title {
+        font-size: 22px;
+    }
+
+    .mp-hd-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mp-hd-promo-title {
+        font-size: 24px;
+    }
+
+    .mp-hd-timer {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
