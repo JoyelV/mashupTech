@@ -18,10 +18,10 @@
 .pw-brands-list {
   display: flex;
   align-items: center;
-  width: 85%; 
-  overflow-x: hidden; 
-  scroll-behavior: smooth; 
-  gap: 80px; 
+  width: 85%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 80px;
   padding: 0 10px;
 }
 
@@ -73,7 +73,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #ffd000; 
+  background-color: #ffd000;
 }
 
 .pw-widget-list {
@@ -112,7 +112,7 @@
 .pw-sc-title {
   font-size: 13px;
   font-weight: 600;
-  color: #0066cc; 
+  color: #0066cc;
   margin: 0 0 6px 0;
   line-height: 1.3;
   cursor: pointer;
@@ -224,6 +224,27 @@
   position: absolute;
   bottom: -20px;
   left: -20px;
-  width: 110%; 
+  width: 110%;
   z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .pw-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .pw-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pw-brands-list {
+    gap: 40px;
+  }
+
+  .pw-widget-title {
+    font-size: 15px;
+  }
 }

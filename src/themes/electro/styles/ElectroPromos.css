@@ -43,7 +43,7 @@
     padding-left: 10px;
 }
 
-.promo-text-top, 
+.promo-text-top,
 .promo-text-bottom {
     font-size: 13px;
     color: #333e48;
@@ -54,7 +54,7 @@
 
 .promo-text-mid {
     font-size: 18px;
-    font-weight: 800; 
+    font-weight: 800;
     color: #333e48;
     margin: 2px 0;
 }
@@ -73,7 +73,7 @@
 .yellow-circle {
     width: 24px;
     height: 24px;
-    background-color: #fed700; 
+    background-color: #fed700;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -96,5 +96,15 @@
 @media (max-width: 640px) {
     .electro-promo-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+    .electro-promo-card {
+        padding: 15px 10px;
+    }
+
+    .promo-text-mid {
+        font-size: 16px;
     }
 }

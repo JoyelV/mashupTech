@@ -5,7 +5,7 @@
     padding: 10px 0;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #666666; 
+    color: #666666;
 }
 
 .electro-topbar-inner {
@@ -50,7 +50,7 @@
 /* Icons */
 .electro-topbar-menu i {
     font-size: 16px;
-    color: #333333; 
+    color: #333333;
 }
 
 /* Separators */
@@ -99,10 +99,17 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+    .electro-topbar {
+        display: none;
+    }
+}
+
 @media (max-width: 992px) {
     .electro-topbar-left {
-        display: none; 
+        display: none;
     }
+
     .electro-topbar-inner {
         justify-content: center;
     }
@@ -112,6 +119,7 @@
     .electro-separator {
         display: none;
     }
+
     .electro-topbar-menu {
         gap: 20px;
         flex-wrap: wrap;
